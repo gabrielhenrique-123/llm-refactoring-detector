@@ -4,7 +4,7 @@
 
 Este projeto é uma ferramenta desenvolvida para identificar operações de refatoração entre duas versões de código-fonte (Antes e Depois). Utilizando a API da OpenAI (GPT-4o-mini), o sistema analisa as mudanças estruturais e detecta refatorações clássicas como **Extract Method**, **Move Method** e **Rename Method**, independentemente da linguagem de programação.
 
-O projeto faz parte de um trabalho acadêmico (Monografia) focado na aplicação de Modelos de Linguagem de Grande Escala (LLMs) na Engenharia de Software.
+O projeto faz parte de um trabalho acadêmico (Monografia) focado na aplicação de LLMs na Engenharia de Software.
 
 ## 🚀 Funcionalidades
 
