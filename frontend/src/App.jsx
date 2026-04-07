@@ -5,13 +5,12 @@ import "./App.css";
 function App() {
   const [codigoAntes, setCodigoAntes] = useState("");
   const [codigoDepois, setCodigoDepois] = useState("");
-  const [linguagem, setLinguagem] = useState("javascript");
   const [resultado, setResultado] = useState("");
   const [loading, setLoading] = useState(false);
 
   async function enviar() {
     setLoading(true);
-    const res = await detectarRefatoracoes(codigoAntes, codigoDepois, linguagem);
+    const res = await detectarRefatoracoes(codigoAntes, codigoDepois);
     setResultado(res);
     setLoading(false);
   }
@@ -21,18 +20,6 @@ function App() {
       <h1 className="titulo">🔎 Detector de Refatorações</h1>
 
       <div className="card">
-        <label className="label">Linguagem:</label>
-        <select
-          className="select"
-          value={linguagem}
-          onChange={(e) => setLinguagem(e.target.value)}
-        >
-          <option value="javascript">JavaScript</option>
-          <option value="python">Python</option>
-          <option value="java">Java</option>
-          <option value="c">C</option>
-        </select>
-
         <div className="comparacao-container">
           <div className="comparacao-item">
             <label className="label">Código Antes:</label>

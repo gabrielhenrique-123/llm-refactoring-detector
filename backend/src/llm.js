@@ -9,14 +9,13 @@ const client = new OpenAI({
  *
  * @param {string} codigoAntes - Código-fonte antes da modificação
  * @param {string} codigoDepois - Código-fonte após a modificação
- * @param {string} linguagem - Linguagem de programação analisada
  * @returns {Promise<Object>} Resultado em formato JSON com as refatorações detectadas
  */
-export async function identificarRefatoracoes(codigoAntes, codigoDepois, linguagem) {
+export async function identifyRefactorings(codigoAntes, codigoDepois) {
   const prompt = `
 You are an expert in Software Engineering and source code evolution.
 
-Your task is to analyze changes between two versions of ${linguagem} source code and identify refactoring operations,
+Your task is to analyze changes between two versions of Java source code and identify refactoring operations,
 according to the classical definition of refactoring:
 
 "A refactoring is a change to the internal structure of the code that does not alter its external behavior."

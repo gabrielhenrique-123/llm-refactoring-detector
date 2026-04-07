@@ -1,16 +1,16 @@
 import { Router } from "express";
-import { identificarRefatoracoes } from "./llm.js";
+import { identifyRefactorings } from "./llm.js";
 
 const router = Router();
 
 router.post("/refatoracoes", async (req, res) => {
   try {
-    const { codigoAntes, codigoDepois, linguagem } = req.body;
+    const { codigoAntes, codigoDepois } = req.body;
 
     if (!codigoAntes || !codigoDepois)
       return res.status(400).json({ erro: "Ambos os códigos são obrigatórios." });
 
-    const resultado = await identificarRefatoracoes(codigoAntes, codigoDepois, linguagem);
+    const resultado = await identifyRefactorings(codigoAntes, codigoDepois);
     return res.json({ resultado });
 
   } catch (error) {
