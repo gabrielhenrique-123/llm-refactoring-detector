@@ -1,0 +1,48 @@
+[
+  {
+    "id": 1159847,
+    "repository": "https://github.com/apache/camel.git",
+    "sha1": "c30deabcaed4726bce4371d76257db63f2eba87c",
+    "url": "https://github.com/apache/camel/commit/c30deabcaed4726bce4371d76257db63f2eba87c",
+    "author": "Otavio Rodolfo Piske",
+    "time": "11/25/21 4:56 AM",
+    "refactorings": [
+      {
+        "type": "Rename Method",
+        "description": "Rename Method public testTransferExeption() : void renamed to public testTransferException() : void in class org.apache.camel.component.jms.JmsTransferExceptionTest",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": null
+  },
+  {
+    "id": 1107899,
+    "repository": "https://github.com/elastic/elasticsearch.git",
+    "sha1": "c928852d4ab7d8c744063979208709ed4429b8e9",
+    "url": "https://github.com/elastic/elasticsearch/commit/c928852d4ab7d8c744063979208709ed4429b8e9",
+    "author": "Christoph Büscher",
+    "time": "6/11/15 9:40 AM",
+    "refactorings": [
+      {
+        "type": "Move Method",
+        "description": "Move Method public newFilter(parseContext QueryParseContext, fieldPattern String, queryName String) : Query from class org.elasticsearch.index.query.ExistsQueryParser to public newFilter(parseContext QueryParseContext, fieldPattern String, queryName String) : Query from class org.elasticsearch.index.query.ExistsQueryBuilder",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      },
+      {
+        "type": "Rename Method",
+        "description": "Rename Method public parse(parseContext QueryParseContext) : Query renamed to public fromXContent(parseContext QueryParseContext) : QueryBuilder in class org.elasticsearch.index.query.ExistsQueryParser",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, GumTreeDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 3765
+  }
+]
