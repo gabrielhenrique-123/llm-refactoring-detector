@@ -8,9 +8,12 @@
     "dev": "nodemon backend/src/server.js"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.104.1",
+    "@google/generative-ai": "^0.24.1",
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
+    "g4f": "^1.4.6",
     "openai": "^6.4.0",
     "route": "^0.2.5"
   },
