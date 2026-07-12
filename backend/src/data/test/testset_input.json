@@ -1,0 +1,164 @@
+[
+  {
+    "id": 1100435,
+    "repository": "https://github.com/realm/realm-java.git",
+    "sha1": "6cf596df183b3c3a38ed5dd9bb3b0100c6548ebb",
+    "url": "https://github.com/realm/realm-java/commit/6cf596df183b3c3a38ed5dd9bb3b0100c6548ebb",
+    "author": "Christian Melchior",
+    "time": "6/8/15 7:26 AM",
+    "refactorings": [
+      {
+        "type": "Extract Method",
+        "description": "Extract Method private showStatus(txt String) : void extracted from private showStatus(realm Realm) : void in class io.realm.examples.realmmigrationexample.MigrationExampleActivity",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RMiner-1x",
+        "validators": null
+      }
+    ]
+  },
+  {
+    "id": 1100663,
+    "repository": "https://github.com/rstudio/rstudio.git",
+    "sha1": "cb49e436b9d7ee55f2531ebc2ef1863f5c9ba9fe",
+    "url": "https://github.com/rstudio/rstudio/commit/cb49e436b9d7ee55f2531ebc2ef1863f5c9ba9fe",
+    "author": "JJ Allaire",
+    "time": "6/8/15 9:53 AM",
+    "refactorings": [
+      {
+        "type": "Extract Method",
+        "description": "Extract Method protected setMaxHeight(maxHeight int) : void extracted from protected wrapMenuBar(menuBar ToolbarMenuBar) : Widget in class org.rstudio.core.client.widget.ScrollableToolbarPopupMenu",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ]
+  },
+  {
+    "id": 1103199,
+    "repository": "https://github.com/oblac/jodd.git",
+    "sha1": "722ef9156896248ef3fbe83adde0f6ff8f46856a",
+    "url": "https://github.com/oblac/jodd/commit/722ef9156896248ef3fbe83adde0f6ff8f46856a",
+    "author": "Igor Spasi?",
+    "time": "6/8/15 6:08 AM",
+    "refactorings": [
+      {
+        "type": "Extract Method",
+        "description": "Extract Method protected resolveFormEncoding() : String extracted from protected formBuffer() : Buffer in class jodd.http.HttpBase",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RMiner-1x",
+        "validators": null
+      }
+    ]
+  },
+  {
+    "id": 1112091,
+    "repository": "https://github.com/droolsjbpm/drools.git",
+    "sha1": "1bf2875e9d73e2d1cd3b58200d5300485f890ff5",
+    "url": "https://github.com/droolsjbpm/drools/commit/1bf2875e9d73e2d1cd3b58200d5300485f890ff5",
+    "author": "Mario Fusco",
+    "time": "6/15/15 9:41 AM",
+    "refactorings": [
+      {
+        "type": "Rename Method",
+        "description": "Rename Method public requiresImmediateFlushingIfNotFiring() : boolean renamed to public requiresImmediateFlushing() : boolean in class org.drools.core.phreak.PhreakTimerNode.TimerAction",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, GumTreeDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ]
+  },
+  {
+    "id": 1117304,
+    "repository": "https://github.com/graphhopper/graphhopper.git",
+    "sha1": "7f80425b6a0af9bdfef12c8a873676e39e0a04a6",
+    "url": "https://github.com/graphhopper/graphhopper/commit/7f80425b6a0af9bdfef12c8a873676e39e0a04a6",
+    "author": "Peter",
+    "time": "6/17/15 5:42 AM",
+    "refactorings": [
+      {
+        "type": "Rename Method",
+        "description": "Rename Method protected createGraph(is3D boolean) : Graph renamed to protected createGHStorage(is3D boolean) : GraphHopperStorage in class com.graphhopper.routing.AbstractRoutingAlgorithmTester",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, GumTreeDiff, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ]
+  },
+  {
+    "id": 1117698,
+    "repository": "https://github.com/real-logic/Aeron.git",
+    "sha1": "35893c115ba23bd62a7036a33390420f074ce660",
+    "url": "https://github.com/real-logic/Aeron/commit/35893c115ba23bd62a7036a33390420f074ce660",
+    "author": "Todd L. Montgomery",
+    "time": "6/16/15 9:43 PM",
+    "refactorings": [
+      {
+        "type": "Rename Method",
+        "description": "Rename Method private processTimersUntil(condition BooleanSupplier) : long renamed to private doWorkUntil(condition BooleanSupplier) : long in class uk.co.real_logic.aeron.driver.DriverConductorTest",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, GumTreeDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ]
+  },
+  {
+    "id": 1111161,
+    "repository": "https://github.com/undertow-io/undertow.git",
+    "sha1": "d5b2bb8cd1393f1c5a5bb623e3d8906cd57e53c4",
+    "url": "https://github.com/undertow-io/undertow/commit/d5b2bb8cd1393f1c5a5bb623e3d8906cd57e53c4",
+    "author": "Stuart Douglas",
+    "time": "6/15/15 6:06 AM",
+    "refactorings": [
+      {
+        "type": "Move Method",
+        "description": "Move Method private isOperator(op String) : boolean from class io.undertow.predicate.PredicateParser to private isOperator(op String) : boolean from class io.undertow.server.handlers.builder.PredicatedHandlersParser",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff",
+        "validators": null
+      }
+    ]
+  },
+  {
+    "id": 1112091,
+    "repository": "https://github.com/droolsjbpm/drools.git",
+    "sha1": "1bf2875e9d73e2d1cd3b58200d5300485f890ff5",
+    "url": "https://github.com/droolsjbpm/drools/commit/1bf2875e9d73e2d1cd3b58200d5300485f890ff5",
+    "author": "Mario Fusco",
+    "time": "6/15/15 9:41 AM",
+    "refactorings": [
+      {
+        "type": "Move Method",
+        "description": "Move Method public notifyHalt() : void from class org.drools.core.common.DefaultAgenda to public notifyHalt() : void from class org.drools.core.phreak.SynchronizedBypassPropagationList",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RMiner-1x",
+        "validators": null
+      }
+    ]
+  },
+  {
+    "id": 1117304,
+    "repository": "https://github.com/graphhopper/graphhopper.git",
+    "sha1": "7f80425b6a0af9bdfef12c8a873676e39e0a04a6",
+    "url": "https://github.com/graphhopper/graphhopper/commit/7f80425b6a0af9bdfef12c8a873676e39e0a04a6",
+    "author": "Peter",
+    "time": "6/17/15 5:42 AM",
+    "refactorings": [
+      {
+        "type": "Move Method",
+        "description": "Move Method package internalEdgeDisconnect(edgeToRemove int, edgeToUpdatePointer long, baseNode int, adjNode int) : long from class com.graphhopper.storage.GraphHopperStorage to package internalEdgeDisconnect(edgeToRemove int, edgeToUpdatePointer long, baseNode int, adjNode int) : long from class com.graphhopper.storage.BaseGraph",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ]
+  }
+]

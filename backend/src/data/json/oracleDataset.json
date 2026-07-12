@@ -1,0 +1,2850 @@
+[
+  {
+    "id": 1105969,
+    "repository": "https://github.com/SonarSource/sonarqube.git",
+    "sha1": "c55a8c3761e9aae9f375d312c14b1bbb9ee9c0fa",
+    "url": "https://github.com/SonarSource/sonarqube/commit/c55a8c3761e9aae9f375d312c14b1bbb9ee9c0fa",
+    "author": "Julien Lancelot",
+    "time": "6/8/15 1:21 PM",
+    "refactorings": [
+      {
+        "type": "Move Method",
+        "description": "Move Method private createComponentDto(reportComponent BatchReport.Component, component Component) : ComponentDto from class org.sonar.server.computation.step.PersistComponentsStep to private createComponentDto(reportComponent BatchReport.Component, component Component) : ComponentDto from class org.sonar.server.computation.step.PersistComponentsStep.PersisComponent",
+        "comment": "null",
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 0
+  },
+  {
+    "id": 1106576,
+    "repository": "https://github.com/liferay/liferay-portal.git",
+    "sha1": "59fd9e696cec5f2ed44c27422bbc426b11647321",
+    "url": "https://github.com/liferay/liferay-portal/commit/59fd9e696cec5f2ed44c27422bbc426b11647321",
+    "author": "Andrea Di Giorgi",
+    "time": "6/10/15 6:43 PM",
+    "refactorings": [
+      {
+        "type": "Move Method",
+        "description": "Move Method public addDependency(project Project, configurationName String, group String, name String, version String, classifier String) : Dependency from class com.liferay.gradle.plugins.poshi.runner.util.GradleUtil to public addDependency(project Project, configurationName String, group String, name String, version String, classifier String, transitive boolean) : Dependency from class com.liferay.gradle.util.GradleUtil",
+        "comment": "class GradleUtil is deleted,  thus it does not total comply with the defenition of move method.",
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x",
+        "validators": "Laleh"
+      }
+    ],
+    "refDiffExecutionTime": 10416
+  },
+  {
+    "id": 1107718,
+    "repository": "https://github.com/SonarSource/sonarqube.git",
+    "sha1": "7668c875dfa7240b1ec08eb60b42107bae1b4cd3",
+    "url": "https://github.com/SonarSource/sonarqube/commit/7668c875dfa7240b1ec08eb60b42107bae1b4cd3",
+    "author": "Julien Lancelot",
+    "time": "6/10/15 9:30 AM",
+    "refactorings": [
+      {
+        "type": "Move Method",
+        "description": "Move Method private createComponentDto(reportComponent BatchReport.Component, component Component) : ComponentDto from class org.sonar.server.computation.step.PersistComponentsStep to private createComponentDto(reportComponent BatchReport.Component, component Component) : ComponentDto from class org.sonar.server.computation.step.PersistComponentsStep.PersisComponent",
+        "comment": "null",
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 2975
+  },
+  {
+    "id": 1107899,
+    "repository": "https://github.com/elastic/elasticsearch.git",
+    "sha1": "c928852d4ab7d8c744063979208709ed4429b8e9",
+    "url": "https://github.com/elastic/elasticsearch/commit/c928852d4ab7d8c744063979208709ed4429b8e9",
+    "author": "Christoph Büscher",
+    "time": "6/11/15 9:40 AM",
+    "refactorings": [
+      {
+        "type": "Move Method",
+        "description": "Move Method public newFilter(parseContext QueryParseContext, fieldPattern String, queryName String) : Query from class org.elasticsearch.index.query.ExistsQueryParser to public newFilter(parseContext QueryParseContext, fieldPattern String, queryName String) : Query from class org.elasticsearch.index.query.ExistsQueryBuilder",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 3765
+  },
+  {
+    "id": 1107905,
+    "repository": "https://github.com/elastic/elasticsearch.git",
+    "sha1": "f77804dad35c13d9ff96456e85737883cf7ddd99",
+    "url": "https://github.com/elastic/elasticsearch/commit/f77804dad35c13d9ff96456e85737883cf7ddd99",
+    "author": "Simon Willnauer",
+    "time": "6/11/15 6:58 AM",
+    "refactorings": [
+      {
+        "type": "Move Method",
+        "description": "Move Method public onRefreshSettings(settings Settings) : void from class org.elasticsearch.index.merge.policy.TieredMergePolicyProvider.ApplySettings to public onRefreshSettings(settings Settings) : void from class org.elasticsearch.index.shard.MergePolicyConfig",
+        "comment": "<p>Matin: Second Opinion. The method is renamed since the return type is changed</p><p>Davood: There are three implementations of the same interface and the method is forced to be implemented in all the implementing classes. All the classes are deleted in this commit, and the newly-added class implements the same interface and the method is identical to one of the removed ones</p>",
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x",
+        "validators": "Matin, Davood"
+      }
+    ],
+    "refDiffExecutionTime": 8239
+  },
+  {
+    "id": 1117640,
+    "repository": "https://github.com/facebook/buck.git",
+    "sha1": "0f8a0af934f09deef1b58e961ffe789c7299bcc1",
+    "url": "https://github.com/facebook/buck/commit/0f8a0af934f09deef1b58e961ffe789c7299bcc1",
+    "author": "Andrew Gallagher",
+    "time": "6/16/15 4:55 PM",
+    "refactorings": [
+      {
+        "type": "Move Method",
+        "description": "Move Method private addAllEntriesToIncludeMap(destination Map<Path,SourcePath>, source Map<Path,SourcePath>) : void from class com.facebook.buck.cxx.AbstractCxxPreprocessorInput to public addAllEntriesToIncludeMap(destination Map<Path,SourcePath>, source Map<Path,SourcePath>) : void from class com.facebook.buck.cxx.AbstractCxxHeaders",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 3919
+  },
+  {
+    "id": 1117822,
+    "repository": "https://github.com/restlet/restlet-framework-java.git",
+    "sha1": "e4de9513d0a06d381b4521211cf688b77379c39d",
+    "url": "https://github.com/restlet/restlet-framework-java/commit/e4de9513d0a06d381b4521211cf688b77379c39d",
+    "author": "quilicicf",
+    "time": "6/17/15 6:09 AM",
+    "refactorings": [
+      {
+        "type": "Move Method",
+        "description": "Move Method private computeSectionName(apiDeclarationPath String) : String from class org.restlet.ext.apispark.internal.conversion.swagger.v1_2.SwaggerReader to public computeSectionName(apiDeclarationPath String) : String from class org.restlet.ext.apispark.internal.conversion.swagger.v1_2.SwaggerUtils",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 1739
+  },
+  {
+    "id": 1121973,
+    "repository": "https://github.com/JetBrains/intellij-community.git",
+    "sha1": "6540dde58190f642e59ca10516f84eb85f855373",
+    "url": "https://github.com/JetBrains/intellij-community/commit/6540dde58190f642e59ca10516f84eb85f855373",
+    "author": "Alexey Kudravtsev",
+    "time": "6/23/15 6:36 AM",
+    "refactorings": [
+      {
+        "type": "Move Method",
+        "description": "Move Method public averageAmongMedians(time long[], part int) : long from class com.intellij.testFramework.PlatformTestUtil to public averageAmongMedians(time long[], part int) : long from class com.intellij.util.ArrayUtil",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 19276
+  },
+  {
+    "id": 1123966,
+    "repository": "https://github.com/spring-projects/spring-data-neo4j.git",
+    "sha1": "071588a418dbc743e0f7dbfe218cd8a6c0f97421",
+    "url": "https://github.com/spring-projects/spring-data-neo4j/commit/071588a418dbc743e0f7dbfe218cd8a6c0f97421",
+    "author": "Vince Bickers",
+    "time": "6/24/15 2:10 PM",
+    "refactorings": [
+      {
+        "type": "Move Method",
+        "description": "Move Method public getId() : Long from class org.springframework.data.neo4j.integration.helloworld.domain.World to public getId() : Long from class org.springframework.data.neo4j.examples.galaxy.domain.World",
+        "comment": "added",
+        "validation": "TP",
+        "detectionTools": "RefDiff",
+        "validators": "Matin"
+      }
+    ],
+    "refDiffExecutionTime": 0
+  },
+  {
+    "id": 1127383,
+    "repository": "https://github.com/spring-projects/spring-boot.git",
+    "sha1": "1e464da2480568014a87dd0bac6febe63a76c889",
+    "url": "https://github.com/spring-projects/spring-boot/commit/1e464da2480568014a87dd0bac6febe63a76c889",
+    "author": "Dave Syer",
+    "time": "6/30/15 5:42 AM",
+    "refactorings": [
+      {
+        "type": "Move Method",
+        "description": "Move Method public setResourceLoader(resourceLoader ResourceLoader) : void from class org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter.FaviconConfiguration to public setResourceLoader(resourceLoader ResourceLoader) : void from class org.springframework.boot.autoconfigure.web.ResourceProperties",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 3535
+  },
+  {
+    "id": 1130197,
+    "repository": "https://github.com/apache/hive.git",
+    "sha1": "d69e5cb21c04d9eede314aaa9ad059fc603fb025",
+    "url": "https://github.com/apache/hive/commit/d69e5cb21c04d9eede314aaa9ad059fc603fb025",
+    "author": "Rui Li",
+    "time": "6/30/15 5:31 AM",
+    "refactorings": [
+      {
+        "type": "Move Method",
+        "description": "Move Method public setTag(tag byte) : void from class org.apache.hadoop.hive.ql.exec.SparkHashTableSinkOperator to public setTag(tag byte) : void from class org.apache.hadoop.hive.ql.plan.SparkHashTableSinkDesc",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 5726
+  },
+  {
+    "id": 1136184,
+    "repository": "https://github.com/JetBrains/intellij-community.git",
+    "sha1": "ce5f9ff96e2718e4014655f819314ac2ac4bd8bf",
+    "url": "https://github.com/JetBrains/intellij-community/commit/ce5f9ff96e2718e4014655f819314ac2ac4bd8bf",
+    "author": "Vassiliy.Kudryashov",
+    "time": "7/8/15 5:41 PM",
+    "refactorings": [
+      {
+        "type": "Move Method",
+        "description": "Move Method private getLiveIndicator(base Icon) : Icon from class com.intellij.execution.ui.RunContentManagerImpl to public getLiveIndicator(base Icon) : Icon from class com.intellij.execution.runners.ExecutionUtil",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 22095
+  },
+  {
+    "id": 1140028,
+    "repository": "https://github.com/neo4j/neo4j.git",
+    "sha1": "a26b61201cd86c9a8773b418d9c84b446e95a601",
+    "url": "https://github.com/neo4j/neo4j/commit/a26b61201cd86c9a8773b418d9c84b446e95a601",
+    "author": "Mattias Persson",
+    "time": "7/14/15 5:14 AM",
+    "refactorings": [
+      {
+        "type": "Move Method",
+        "description": "Move Method public arrayAsCollection(arrayValue Object) : Collection<Object> from class org.neo4j.kernel.impl.util.IoPrimitiveUtils to public arrayAsCollection(arrayValue Object) : Collection<Object> from class org.neo4j.graphdb.Neo4jMatchers",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 10292
+  },
+  {
+    "id": 1140931,
+    "repository": "https://github.com/JetBrains/intellij-community.git",
+    "sha1": "10f769a60c7c7b73982e978959d381df487bbe2d",
+    "url": "https://github.com/JetBrains/intellij-community/commit/10f769a60c7c7b73982e978959d381df487bbe2d",
+    "author": "nik",
+    "time": "7/15/15 11:13 AM",
+    "refactorings": [
+      {
+        "type": "Move Method",
+        "description": "Move Method private getJUnit4JarPaths() : List<String> from class com.intellij.codeInsight.daemon.impl.quickfix.OrderEntryFix to public getJUnit4JarPaths() : List<String> from class com.intellij.openapi.projectRoots.ex.JavaSdkUtil",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 18541
+  },
+  {
+    "id": 1142210,
+    "repository": "https://github.com/JetBrains/intellij-community.git",
+    "sha1": "6ad1dcbfef36821a71cbffa301c58d1c3ffe8d62",
+    "url": "https://github.com/JetBrains/intellij-community/commit/6ad1dcbfef36821a71cbffa301c58d1c3ffe8d62",
+    "author": "Anton Makeev",
+    "time": "7/16/15 8:31 AM",
+    "refactorings": [
+      {
+        "type": "Move Method",
+        "description": "Move Method protected createMainModule(moduleType ModuleType) : Module from class com.intellij.testFramework.LightPlatformTestCase to public createMainModule(project Project) : Module from class com.intellij.testFramework.LightProjectDescriptor",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x",
+        "validators": "Matin"
+      }
+    ],
+    "refDiffExecutionTime": 15903
+  },
+  {
+    "id": 1142783,
+    "repository": "https://github.com/apache/hive.git",
+    "sha1": "240097b78b70172e1cf9bc37876a566ddfb9e115",
+    "url": "https://github.com/apache/hive/commit/240097b78b70172e1cf9bc37876a566ddfb9e115",
+    "author": "Owen O'Malley",
+    "time": "7/15/15 6:41 PM",
+    "refactorings": [
+      {
+        "type": "Move Method",
+        "description": "Move Method public getAcidEventFields() : List<String> from class org.apache.hadoop.hive.ql.io.orc.OrcRecordUpdater to package getAcidEventFields() : List<String> from class org.apache.hadoop.hive.ql.io.orc.RecordReaderFactory",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 2375
+  },
+  {
+    "id": 1143000,
+    "repository": "https://github.com/JetBrains/intellij-community.git",
+    "sha1": "97811cf971f7ccf6a5fc5e90a491db2f58d49da1",
+    "url": "https://github.com/JetBrains/intellij-community/commit/97811cf971f7ccf6a5fc5e90a491db2f58d49da1",
+    "author": "Eugene Zhuravlev",
+    "time": "7/16/15 12:00 PM",
+    "refactorings": [
+      {
+        "type": "Move Method",
+        "description": "Move Method private initLoggers() : void from class org.jetbrains.jps.cmdline.BuildMain to public initLoggers() : void from class org.jetbrains.jps.cmdline.LogSetup",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": "Matin"
+      }
+    ],
+    "refDiffExecutionTime": 15639
+  },
+  {
+    "id": 1143549,
+    "repository": "https://github.com/apache/cassandra.git",
+    "sha1": "4fcd7d4d366d001cf5f1f7d926c608c902e3f0af",
+    "url": "https://github.com/apache/cassandra/commit/4fcd7d4d366d001cf5f1f7d926c608c902e3f0af",
+    "author": "Sylvain Lebresne",
+    "time": "7/16/15 10:21 AM",
+    "refactorings": [
+      {
+        "type": "Move Method",
+        "description": "Move Method public testConcurrency() : void from class org.apache.cassandra.locator.DynamicEndpointSnitchTest to public testConcurrency() : void from class org.apache.cassandra.locator.DynamicEndpointSnitchLongTest",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": "Matin"
+      }
+    ],
+    "refDiffExecutionTime": 4060
+  },
+  {
+    "id": 1146882,
+    "repository": "https://github.com/querydsl/querydsl.git",
+    "sha1": "e1aa31cff985e2a0c2babf4da96dc0a538d5e514",
+    "url": "https://github.com/querydsl/querydsl/commit/e1aa31cff985e2a0c2babf4da96dc0a538d5e514",
+    "author": "Timo Westkämper",
+    "time": "7/22/15 5:03 PM",
+    "refactorings": [
+      {
+        "type": "Move Method",
+        "description": "Move Method private escapeLiteral(str String) : String from class com.querydsl.jpa.JPQLSerializer to private escapeLiteral(str String) : String from class com.querydsl.jpa.JPQLTemplates",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 0
+  },
+  {
+    "id": 1147051,
+    "repository": "https://github.com/PhilJay/MPAndroidChart.git",
+    "sha1": "3514aaedf9624222c985cb3abb12df2d9b514b12",
+    "url": "https://github.com/PhilJay/MPAndroidChart/commit/3514aaedf9624222c985cb3abb12df2d9b514b12",
+    "author": "Philipp Jahoda",
+    "time": "7/24/15 8:11 AM",
+    "refactorings": [
+      {
+        "type": "Move Method",
+        "description": "Move Method protected getStackedHighlight(xIndex int, dataSet int, yValue double) : Highlight from class com.github.mikephil.charting.charts.BarChart to protected getStackedHighlight(set BarDataSet, xIndex int, dataSetIndex int, yValue double) : Highlight from class com.github.mikephil.charting.highlight.BarHighlighter",
+        "comment": "added",
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": "Davood"
+      }
+    ],
+    "refDiffExecutionTime": 0
+  },
+  {
+    "id": 1147651,
+    "repository": "https://github.com/google/guava.git",
+    "sha1": "31fc19200207ccadc45328037d8a2a62b617c029",
+    "url": "https://github.com/google/guava/commit/31fc19200207ccadc45328037d8a2a62b617c029",
+    "author": "bul",
+    "time": "7/24/15 2:38 PM",
+    "refactorings": [
+      {
+        "type": "Move Method",
+        "description": "Move Method private digit(c char) : int from class com.google.common.primitives.Ints to private digit(c char) : int from class com.google.common.primitives.Longs",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 1248
+  },
+  {
+    "id": 1149312,
+    "repository": "https://github.com/Atmosphere/atmosphere.git",
+    "sha1": "69c229b7611ff8c6a20ff2d4da917a68c1cde64a",
+    "url": "https://github.com/Atmosphere/atmosphere/commit/69c229b7611ff8c6a20ff2d4da917a68c1cde64a",
+    "author": "jfarcand",
+    "time": "7/22/15 3:38 PM",
+    "refactorings": [
+      {
+        "type": "Move Method",
+        "description": "Move Method private getInheritedPrivateFields(type Class<?>) : Set<Field> from class org.atmosphere.inject.InjectableObjectFactory to public getInheritedPrivateFields(type Class<?>) : Set<Field> from class org.atmosphere.util.Utils",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 658
+  },
+  {
+    "id": 1150594,
+    "repository": "https://github.com/hazelcast/hazelcast.git",
+    "sha1": "f1e26fa73074a89680a2e1756d85eb80ad87c3bf",
+    "url": "https://github.com/hazelcast/hazelcast/commit/f1e26fa73074a89680a2e1756d85eb80ad87c3bf",
+    "author": "Jaromir Hamala",
+    "time": "7/27/15 10:56 AM",
+    "refactorings": [
+      {
+        "type": "Move Method",
+        "description": "Move Method private readAttribute(entry Map.Entry, attribute String) : Comparable from class com.hazelcast.query.Predicates to package readAttribute(entry Map.Entry, attribute String) : Comparable from class com.hazelcast.query.impl.predicates.AttributeUtils",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-2x, RMiner-1x",
+        "validators": "Matin"
+      }
+    ],
+    "refDiffExecutionTime": 3556
+  },
+  {
+    "id": 1152358,
+    "repository": "https://github.com/hibernate/hibernate-orm.git",
+    "sha1": "0b6ea757e34a63b1421b77ed5fbb61398377aab1",
+    "url": "https://github.com/hibernate/hibernate-orm/commit/0b6ea757e34a63b1421b77ed5fbb61398377aab1",
+    "author": "Gail Badner",
+    "time": "7/29/15 12:10 AM",
+    "refactorings": [
+      {
+        "type": "Move Method",
+        "description": "Move Method private checkLazyField(entity EntityWithLazyProperty, em EntityManager, expected byte[]) : void from class org.hibernate.jpa.test.callbacks.CallbacksTest to private checkLazyField(entity EntityWithLazyProperty, em EntityManager, expected byte[]) : void from class org.hibernate.jpa.test.instrument.cases.TestLazyPropertyOnPreUpdateExecutable",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": "Matin"
+      }
+    ],
+    "refDiffExecutionTime": 5200
+  },
+  {
+    "id": 1156456,
+    "repository": "https://github.com/gradle/gradle.git",
+    "sha1": "3a7ccf5a252077332b9505acb22f190745f726f7",
+    "url": "https://github.com/gradle/gradle/commit/3a7ccf5a252077332b9505acb22f190745f726f7",
+    "author": "Sterling Greene",
+    "time": "8/3/15 4:21 PM",
+    "refactorings": [
+      {
+        "type": "Move Method",
+        "description": "Move Method private registerOrFindDeploymentHandle(deploymentRegistry DeploymentRegistry, deploymentId String) : PlayApplicationDeploymentHandle from class org.gradle.play.plugins.PlayApplicationPlugin.Rules to private registerOrFindDeploymentHandle(deploymentId String) : PlayApplicationDeploymentHandle from class org.gradle.play.tasks.PlayRun",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 4377
+  },
+  {
+    "id": 1157168,
+    "repository": "https://github.com/JoanZapata/android-iconify.git",
+    "sha1": "b08f28a10d050beaba6250e9e9c46efe13d9caaa",
+    "url": "https://github.com/JoanZapata/android-iconify/commit/b08f28a10d050beaba6250e9e9c46efe13d9caaa",
+    "author": "Joan Zapata",
+    "time": "8/4/15 6:55 PM",
+    "refactorings": [
+      {
+        "type": "Move Method",
+        "description": "Move Method public character() : char from class com.joanzapata.android.iconify.BaseIconValue to public character() : char from class com.joanzapata.android.iconify.Icon",
+        "comment": "<p>This is an abstract method moved from deleted interface BaseIconValue to new interface Icon.<br />The new interface is implemented by <span class='pl-k' style='box-sizing: border-box; color: var(--color-prettylights-syntax-keyword); font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #e6ffed; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;'>public</span> <span class='pl-k' style='box-sizing: border-box; color: var(--color-prettylights-syntax-keyword); font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #e6ffed; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;'>enum</span> <span class='pl-en' style='box-sizing: border-box; color: var(--color-prettylights-syntax-entity); font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #e6ffed; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;'>FontAwesomeIcons</span> <span class='pl-k' style='box-sizing: border-box; color: var(--color-prettylights-syntax-keyword); font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #e6ffed; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;'>implements</span> <span class='pl-e' style='box-sizing: border-box; color: var(--color-prettylights-syntax-entity); font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #e6ffed; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;'>Icon</span></p>",
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner",
+        "validators": "Nikos"
+      }
+    ],
+    "refDiffExecutionTime": 695
+  },
+  {
+    "id": 1130153,
+    "repository": "https://github.com/Graylog2/graylog2-server.git",
+    "sha1": "767171c90110c4c5781e8f6d19ece1fba0d492e9",
+    "url": "https://github.com/Graylog2/graylog2-server/commit/767171c90110c4c5781e8f6d19ece1fba0d492e9",
+    "author": "Jochen Schalanda",
+    "time": "6/30/15 8:46 AM",
+    "refactorings": [
+      {
+        "type": "Move Method",
+        "description": "Move Method public testTimestampStatsOfIndex() : void from class org.graylog2.indexer.searches.SearchesTest to public testTimestampStatsOfIndex() : void from class org.graylog2.indexer.ranges.EsIndexRangeServiceTest",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 933
+  },
+  {
+    "id": 1131927,
+    "repository": "https://github.com/square/wire.git",
+    "sha1": "85a690e3cdbbb8447342eefdf690e22ad1b33e02",
+    "url": "https://github.com/square/wire/commit/85a690e3cdbbb8447342eefdf690e22ad1b33e02",
+    "author": "jwilson",
+    "time": "7/3/15 1:18 AM",
+    "refactorings": [
+      {
+        "type": "Move Method",
+        "description": "Move Method public optionMatches(options List<WireOption>, namePattern String, valuePattern String) : boolean from class com.squareup.wire.internal.Util to public optionMatches(namePattern String, valuePattern String) : boolean from class com.squareup.wire.model.Options",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": "Matin"
+      }
+    ],
+    "refDiffExecutionTime": 0
+  },
+  {
+    "id": 1133238,
+    "repository": "https://github.com/google/truth.git",
+    "sha1": "1768840bf1e69892fd2a23776817f620edfed536",
+    "url": "https://github.com/google/truth/commit/1768840bf1e69892fd2a23776817f620edfed536",
+    "author": "kak",
+    "time": "7/6/15 1:54 PM",
+    "refactorings": [
+      {
+        "type": "Move Method",
+        "description": "Move Method public isStrictlyOrderedWithNonComparableElementsFailure() : void from class com.google.common.truth.ListTest to public isStrictlyOrderedWithNonComparableElementsFailure() : void from class com.google.common.truth.IterableTest",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": "Matin"
+      }
+    ],
+    "refDiffExecutionTime": 301
+  },
+  {
+    "id": 1133259,
+    "repository": "https://github.com/slapperwan/gh4a.git",
+    "sha1": "b8fffb706258db4c4d2f608d8e8dad9312e2230d",
+    "url": "https://github.com/slapperwan/gh4a/commit/b8fffb706258db4c4d2f608d8e8dad9312e2230d",
+    "author": "Danny Baumann",
+    "time": "7/6/15 4:56 AM",
+    "refactorings": [
+      {
+        "type": "Move Method",
+        "description": "Move Method private writeScriptInclude(builder StringBuilder, scriptName String) : void from class com.gh4a.utils.StringUtils to protected writeScriptInclude(builder StringBuilder, scriptName String) : void from class com.gh4a.activities.WebViewerActivity",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 646
+  },
+  {
+    "id": 1135604,
+    "repository": "https://github.com/deeplearning4j/deeplearning4j.git",
+    "sha1": "91cdfa1ffd937a4cb01cdc0052874ef7831955e2",
+    "url": "https://github.com/deeplearning4j/deeplearning4j/commit/91cdfa1ffd937a4cb01cdc0052874ef7831955e2",
+    "author": "nyghtowl",
+    "time": "7/7/15 8:06 PM",
+    "refactorings": [
+      {
+        "type": "Move Method",
+        "description": "Move Method public testBackTrackLine() : void from class org.deeplearning4j.plot.ListenerTest to public testBackTrackLine() : void from class org.deeplearning4j.optimize.solver.BackTrackLineSearchTest",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 997
+  },
+  {
+    "id": 1137085,
+    "repository": "https://github.com/facebook/facebook-android-sdk.git",
+    "sha1": "19d1936c3b07d97d88646aeae30de747715e3248",
+    "url": "https://github.com/facebook/facebook-android-sdk/commit/19d1936c3b07d97d88646aeae30de747715e3248",
+    "author": "Ming Li",
+    "time": "7/8/15 3:33 PM",
+    "refactorings": [
+      {
+        "type": "Move Method",
+        "description": "Move Method public newUploadPhotoRequest(graphPath String, accessToken AccessToken, file File, caption String, params Bundle, callback Callback) : GraphRequest from class com.facebook.share.internal.ShareInternalUtility to public newUploadPhotoRequest(accessToken AccessToken, graphPath String, file File, caption String, params Bundle, callback Callback) : GraphRequest from class com.facebook.GraphRequest",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 1748
+  },
+  {
+    "id": 1140686,
+    "repository": "https://github.com/wordpress-mobile/WordPress-Android.git",
+    "sha1": "1b21ba4bcea986988d4bbd578e3bb9a20ec69606",
+    "url": "https://github.com/wordpress-mobile/WordPress-Android/commit/1b21ba4bcea986988d4bbd578e3bb9a20ec69606",
+    "author": "Tony Rankin",
+    "time": "7/14/15 2:27 AM",
+    "refactorings": [
+      {
+        "type": "Move Method",
+        "description": "Move Method private getLanguageString(languagueCode String) : String from class org.wordpress.android.ui.prefs.SiteSettingsFragment to public getLanguageString(languagueCode String, displayLocale Locale) : String from class org.wordpress.android.util.StringUtils",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 1235
+  },
+  {
+    "id": 1144626,
+    "repository": "https://github.com/jline/jline2.git",
+    "sha1": "1eb3b624b288a4b1a054420d3efb05b8f1d28517",
+    "url": "https://github.com/jline/jline2/commit/1eb3b624b288a4b1a054420d3efb05b8f1d28517",
+    "author": "Guillaume Nodet",
+    "time": "7/20/15 2:41 PM",
+    "refactorings": [
+      {
+        "type": "Move Method",
+        "description": "Move Method public wcwidth(cs CharSequence, start int, end int) : int from class jline.console.WCWidth to package wcwidth(str CharSequence, start int, end int, pos int) : int from class jline.console.ConsoleReader",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 460
+  },
+  {
+    "id": 1106365,
+    "repository": "https://github.com/apache/cassandra.git",
+    "sha1": "446e2537895c15b404a74107069a12f3fc404b15",
+    "url": "https://github.com/apache/cassandra/commit/446e2537895c15b404a74107069a12f3fc404b15",
+    "author": "Philip Thompson",
+    "time": "6/8/15 4:41 PM",
+    "refactorings": [
+      {
+        "type": "Move Method",
+        "description": "Move Method public getSplits(jobConf JobConf, numSplits int) : org.apache.hadoop.mapred.InputSplit[] from class org.apache.cassandra.hadoop.AbstractColumnFamilyInputFormat to public getSplits(jobConf JobConf, numSplits int) : InputSplit[] from class org.apache.cassandra.hadoop.cql3.CqlInputFormat",
+        "comment": "<p>Return type is non-qualified after the move</p><p>public org.apache.hadoop.mapred.InputSplit[] getSplits(JobConf jobConf, int numSplits) throws IOException<br />public InputSplit[] getSplits(JobConf jobConf, int numSplits) throws IOException</p>",
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RD-1x, RD-2x, RMiner-1x",
+        "validators": "Nikos"
+      }
+    ],
+    "refDiffExecutionTime": 6589
+  },
+  {
+    "id": 1120836,
+    "repository": "https://github.com/SlimeKnights/TinkersConstruct.git",
+    "sha1": "71820e573134be3fad3935035249cd77c4412f4e",
+    "url": "https://github.com/SlimeKnights/TinkersConstruct/commit/71820e573134be3fad3935035249cd77c4412f4e",
+    "author": "Bernhard Bonigl",
+    "time": "6/20/15 11:27 AM",
+    "refactorings": [
+      {
+        "type": "Move Method",
+        "description": "Move Method public addItem(oredictItem String, count int) : void from class tconstruct.library.modifiers.Modifier to public addItem(oredictItem String, amountNeeded int, amountMatched int) : void from class tconstruct.library.mantle.RecipeMatchRegistry",
+        "comment": "<p>For me, it is an 'extract class' refactoring. Class&nbsp;<span class='blob-code-inner'><span class='pl-en'>RecipeMatchRegistry</span></span> is extracted from Modifier.</p><p>See that <span class='blob-code-inner'><span class='pl-smi x x-first x-last'>RecipeMatchRegistry is an attribute of class&nbsp; Modifier in the refactored version, and the&nbsp; 3 </span></span><span class='blob-code-inner'><span class='pl-en'>addItem(..)</span></span><span class='blob-code-inner'><span class='pl-smi x x-first x-last'><span class='pl-en'> methods in the refactored version of Modifier are now </span></span></span><span class='blob-code-inner'><span class='pl-smi x x-first x-last'><span class='pl-en'>delegating to the 3 addItem(..) in RecipeMatchRegistry.</span></span></span></p><p><span class='blob-code-inner'><span class='pl-smi x x-first x-last'><span class='pl-en'>The method has been moved with the addition of a parameter (amountMatched), which is not used.</span></span></span></p><p><span class='blob-code-inner'><span class='pl-smi x x-first x-last'><span class='pl-en'>- public void addItem(String oredictItem, int count) {<br />- modifierItems.add(new RecipeMatch.Oredict(oredictItem, count));<br />- }</span></span></span></p><p><span class='blob-code-inner'><span class='pl-smi x x-first x-last'><span class='pl-en'>  public void addItem(String oredictItem, int amountNeeded, int amountMatched) {<br />  items.add(new RecipeMatch.Oredict(oredictItem, amountNeeded));<br />  }</span></span></span></p>",
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x",
+        "validators": "Matin, Laleh, Davood, Nikos"
+      }
+    ],
+    "refDiffExecutionTime": 0
+  },
+  {
+    "id": 1127493,
+    "repository": "https://github.com/rstudio/rstudio.git",
+    "sha1": "229d1b60c03a3f8375451c68a6911660a3993777",
+    "url": "https://github.com/rstudio/rstudio/commit/229d1b60c03a3f8375451c68a6911660a3993777",
+    "author": "Jonathan McPherson",
+    "time": "6/30/15 3:32 PM",
+    "refactorings": [
+      {
+        "type": "Move Method",
+        "description": "Move Method public checkForExistingApp(account RSConnectAccount, appName String, onValidated OperationWithInput<Boolean>) : void from class org.rstudio.studio.client.rsconnect.RSConnect to private checkForExistingApp(account RSConnectAccount, appName String, onValidated OperationWithInput<Boolean>) : void from class org.rstudio.studio.client.rsconnect.ui.RSConnectDeploy",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 3785
+  },
+  {
+    "id": 1153409,
+    "repository": "https://github.com/apache/cassandra.git",
+    "sha1": "3bdcaa336a6e6a9727c333b433bb9f5d3afc0fb1",
+    "url": "https://github.com/apache/cassandra/commit/3bdcaa336a6e6a9727c333b433bb9f5d3afc0fb1",
+    "author": "Carl Yeksigian",
+    "time": "7/29/15 5:15 PM",
+    "refactorings": [
+      {
+        "type": "Move Method",
+        "description": "Move Method public setOrdering(alias ColumnIdentifier, reversed boolean) : void from class org.apache.cassandra.cql3.statements.CreateTableStatement.RawStatement to public setOrdering(alias ColumnIdentifier, reversed boolean) : void from class org.apache.cassandra.cql3.statements.CFProperties",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": "Matin"
+      }
+    ],
+    "refDiffExecutionTime": 11578
+  },
+  {
+    "id": 1153579,
+    "repository": "https://github.com/cwensel/cascading.git",
+    "sha1": "f9d3171f5020da5c359cdda28ef05172e858c464",
+    "url": "https://github.com/cwensel/cascading/commit/f9d3171f5020da5c359cdda28ef05172e858c464",
+    "author": "Chris K Wensel",
+    "time": "7/29/15 7:47 PM",
+    "refactorings": [
+      {
+        "type": "Move Method",
+        "description": "Move Method protected logDebug(message String, arguments Object...) : void from class cascading.stats.tez.TezNodeStats to protected logDebug(message String, arguments Object...) : void from class cascading.stats.CascadingStats",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 1441
+  },
+  {
+    "id": 1117005,
+    "repository": "https://github.com/crate/crate.git",
+    "sha1": "72b5348307d86b1a118e546c24d97f1ac1895bdb",
+    "url": "https://github.com/crate/crate/commit/72b5348307d86b1a118e546c24d97f1ac1895bdb",
+    "author": "Sebastian Utz",
+    "time": "6/16/15 7:01 AM",
+    "refactorings": [
+      {
+        "type": "Move Method",
+        "description": "Move Method public leftMergeNode() : MergeNode from class io.crate.planner.node.dql.join.NestedLoop to public leftMergeNode() : MergeNode from class io.crate.planner.node.dql.join.NestedLoopNode",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 0
+  },
+  {
+    "id": 1120391,
+    "repository": "https://github.com/apache/tomcat.git",
+    "sha1": "40f00732b9652350ac11830367fd32db67987fc7",
+    "url": "https://github.com/apache/tomcat/commit/40f00732b9652350ac11830367fd32db67987fc7",
+    "author": "Mark Thomas",
+    "time": "6/19/15 4:38 PM",
+    "refactorings": [
+      {
+        "type": "Move Method",
+        "description": "Move Method public getCertificateKeystoreProvider() : String from class org.apache.tomcat.util.net.SSLHostConfig to public getCertificateKeystoreProvider() : String from class org.apache.tomcat.util.net.SSLHostConfigCertificate",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 1133
+  },
+  {
+    "id": 1121897,
+    "repository": "https://github.com/spring-projects/spring-boot.git",
+    "sha1": "becced5f0b7bac8200df7a5706b568687b517b90",
+    "url": "https://github.com/spring-projects/spring-boot/commit/becced5f0b7bac8200df7a5706b568687b517b90",
+    "author": "Tomasz Przyby?a",
+    "time": "6/23/15 3:43 AM",
+    "refactorings": [
+      {
+        "type": "Move Method",
+        "description": "Move Method private getEnvironment(event SpringApplicationEvent) : Environment from class org.springframework.boot.actuate.system.ApplicationPidFileWriter to private getEnvironment(event SpringApplicationEvent) : Environment from class org.springframework.boot.actuate.system.ApplicationPidFileWriter.SpringProperty",
+        "comment": "<p>The method is moved to the inner class of ApplicationPidFileWriter. The inner class is added in the refactored version.</p>",
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": "Laleh, Nikos"
+      }
+    ],
+    "refDiffExecutionTime": 1721
+  },
+  {
+    "id": 1122164,
+    "repository": "https://github.com/neo4j/neo4j.git",
+    "sha1": "001de307492df8f84ad15f6aaa0bd1e748d4ce27",
+    "url": "https://github.com/neo4j/neo4j/commit/001de307492df8f84ad15f6aaa0bd1e748d4ce27",
+    "author": "Davide Grohmann",
+    "time": "6/22/15 1:34 PM",
+    "refactorings": [
+      {
+        "type": "Move Method",
+        "description": "Move Method public awaitAllTransactionsClosed() : void from class org.neo4j.kernel.impl.transaction.log.rotation.LogRotationControl to private awaitAllTransactionsClosed() : void from class org.neo4j.kernel.NeoStoreDataSource",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 11758
+  },
+  {
+    "id": 1125095,
+    "repository": "https://github.com/apache/drill.git",
+    "sha1": "c1b847acdc8cb90a1498b236b3bb5c81ca75c044",
+    "url": "https://github.com/apache/drill/commit/c1b847acdc8cb90a1498b236b3bb5c81ca75c044",
+    "author": "vkorukanti",
+    "time": "6/25/15 11:53 AM",
+    "refactorings": [
+      {
+        "type": "Move Method",
+        "description": "Move Method private executeQuery(hiveDriver Driver, query String) : void from class org.apache.drill.exec.store.hive.HiveTestDataGenerator to public executeQuery(hiveDriver Driver, query String) : void from class org.apache.drill.exec.hive.HiveTestUtilities",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": "Matin"
+      }
+    ],
+    "refDiffExecutionTime": 2022
+  },
+  {
+    "id": 1127268,
+    "repository": "https://github.com/apache/hive.git",
+    "sha1": "102b23b16bf26cbf439009b4b95542490a082710",
+    "url": "https://github.com/apache/hive/commit/102b23b16bf26cbf439009b4b95542490a082710",
+    "author": "Ferdinand Xu",
+    "time": "6/28/15 9:42 PM",
+    "refactorings": [
+      {
+        "type": "Move Method",
+        "description": "Move Method private isSourceCMD(cmd String) : boolean from class org.apache.hive.beeline.BeeLine to private isSourceCMD(cmd String) : boolean from class org.apache.hive.beeline.Commands",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 5292
+  },
+  {
+    "id": 1151664,
+    "repository": "https://github.com/hazelcast/hazelcast.git",
+    "sha1": "e84e96ff5c2bdc48cea7f75fd794506159c4e1f7",
+    "url": "https://github.com/hazelcast/hazelcast/commit/e84e96ff5c2bdc48cea7f75fd794506159c4e1f7",
+    "author": "As?m Arslan",
+    "time": "7/28/15 5:19 AM",
+    "refactorings": [
+      {
+        "type": "Move Method",
+        "description": "Move Method public convertTypeToCSharp(type String) : String from class com.hazelcast.client.protocol.generator.CodecModel.ParameterModel to public convertTypeToCSharp(type String) : String from class com.hazelcast.client.protocol.generator.CodeGenerationUtils",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 1902
+  },
+  {
+    "id": 1152936,
+    "repository": "https://github.com/wildfly/wildfly.git",
+    "sha1": "4aa2e8746b5492bbc1cf2b36af956cf3b01e40f5",
+    "url": "https://github.com/wildfly/wildfly/commit/4aa2e8746b5492bbc1cf2b36af956cf3b01e40f5",
+    "author": "Paul Ferraro",
+    "time": "7/28/15 7:18 PM",
+    "refactorings": [
+      {
+        "type": "Move Method",
+        "description": "Move Method public addAttributes(enumClass Class<E>) : AddStepHandler from class org.jboss.as.clustering.controller.AddStepHandler to public addAttributes(enumClass Class<E>) : ResourceDescriptor from class org.jboss.as.clustering.controller.ResourceDescriptor",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 8243
+  },
+  {
+    "id": 1153762,
+    "repository": "https://github.com/netty/netty.git",
+    "sha1": "d31fa31cdcc5ea2fa96116e3b1265baa180df58a",
+    "url": "https://github.com/netty/netty/commit/d31fa31cdcc5ea2fa96116e3b1265baa180df58a",
+    "author": "Jakob Buchgraber",
+    "time": "7/30/15 2:38 PM",
+    "refactorings": [
+      {
+        "type": "Move Method",
+        "description": "Move Method public remove() : void from class io.netty.handler.codec.DefaultHeaders.KeyValueHeaderIterator to public remove() : void from class io.netty.handler.codec.DefaultHeaders.NameValueIterator",
+        "comment": "<p>Implement the same interface, but have identical body</p>",
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x",
+        "validators": "Matin, Laleh, Davood, Nikos"
+      }
+    ],
+    "refDiffExecutionTime": 2532
+  },
+  {
+    "id": 1156165,
+    "repository": "https://github.com/square/mortar.git",
+    "sha1": "72dda3404820a82d53f1a16bb2ed9ad95f745d3c",
+    "url": "https://github.com/square/mortar/commit/72dda3404820a82d53f1a16bb2ed9ad95f745d3c",
+    "author": "Ray Ryan",
+    "time": "8/3/15 10:11 PM",
+    "refactorings": [
+      {
+        "type": "Move Method",
+        "description": "Move Method public destroyIsIdempotent() : void from class mortar.ObjectGraphServiceTest to public destroyIsIdempotent() : void from class mortar.MortarScopeTest",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 0
+  },
+  {
+    "id": 1145105,
+    "repository": "https://github.com/MovingBlocks/Terasology.git",
+    "sha1": "543a9808a85619dbe5acc2373cb4fe5344442de7",
+    "url": "https://github.com/MovingBlocks/Terasology/commit/543a9808a85619dbe5acc2373cb4fe5344442de7",
+    "author": "Immortius",
+    "time": "7/17/15 3:07 AM",
+    "refactorings": [
+      {
+        "type": "Move Method",
+        "description": "Move Method private validateServerIdentity() : boolean from class org.terasology.engine.TerasologyEngine to private validateServerIdentity() : boolean from class org.terasology.engine.subsystem.common.ConfigurationSubsystem",
+        "comment": "<p>Matin: TP</p><p>Nikos: After the move <span class='blob-code-inner'><span class='pl-k'>import</span> <span class='pl-smi'>org.terasology.engine.subsystem.common.ConfigurationSubsystem</span></span> is added to org.terasology.engine.TerasologyEngine</p>",
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": "Matin, Nikos"
+      }
+    ],
+    "refDiffExecutionTime": 2583
+  },
+  {
+    "id": 1117765,
+    "repository": "https://github.com/GoClipse/goclipse.git",
+    "sha1": "851ab757698304e9d8d4ae24ab75be619ddae31a",
+    "url": "https://github.com/GoClipse/goclipse/commit/851ab757698304e9d8d4ae24ab75be619ddae31a",
+    "author": "Bruno Medeiros",
+    "time": "6/16/15 2:13 PM",
+    "refactorings": [
+      {
+        "type": "Rename Method",
+        "description": "Rename Method public getInvocationOffest() : int renamed to public getInvocationOffset() : int in class melnorme.lang.ide.ui.editor.actions.AbstractOpenElementOperation",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, GumTreeDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 902
+  },
+  {
+    "id": 1119661,
+    "repository": "https://github.com/antlr/antlr4.git",
+    "sha1": "a9ca2efae56815dc464189b055ffe9da23766f7f",
+    "url": "https://github.com/antlr/antlr4/commit/a9ca2efae56815dc464189b055ffe9da23766f7f",
+    "author": "parrt",
+    "time": "6/18/15 9:25 PM",
+    "refactorings": [
+      {
+        "type": "Rename Method",
+        "description": "Rename Method public testInterp(lg LexerGrammar, g Grammar, startRule String, input String, decision int, expectedAmbigAlts String, overallTree String, expectedParseTrees String[]) : void renamed to public testAmbiguousTrees(lg LexerGrammar, g Grammar, startRule String, input String, decision int, expectedAmbigAlts String, overallTree String, expectedParseTrees String[]) : void in class org.antlr.v4.test.tool.TestAmbigParseTrees",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, GumTreeDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 1313
+  },
+  {
+    "id": 1120106,
+    "repository": "https://github.com/spring-projects/spring-framework.git",
+    "sha1": "ece12f9d370108549fffac105e4bcb7faeaaf124",
+    "url": "https://github.com/spring-projects/spring-framework/commit/ece12f9d370108549fffac105e4bcb7faeaaf124",
+    "author": "Sam Brannen",
+    "time": "6/19/15 10:27 AM",
+    "refactorings": [
+      {
+        "type": "Rename Method",
+        "description": "Rename Method private validateAttributes(attributes Map<String,Object>, annotationType Class<? extends Annotation>) : void renamed to private enrichAndValidateAttributes(attributes Map<String,Object>, annotationType Class<? extends Annotation>) : Map<String,Object> in class org.springframework.core.annotation.MapAnnotationAttributeExtractor",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, GumTreeDiff, RD-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 5439
+  },
+  {
+    "id": 1155930,
+    "repository": "https://github.com/apache/hive.git",
+    "sha1": "0fa45e4a562fc2586b1ef06a88e9c186a0835316",
+    "url": "https://github.com/apache/hive/commit/0fa45e4a562fc2586b1ef06a88e9c186a0835316",
+    "author": "Alan Gates",
+    "time": "7/31/15 3:07 PM",
+    "refactorings": [
+      {
+        "type": "Rename Method",
+        "description": "Rename Method public doImport() : void renamed to public importAll() : void in class org.apache.hadoop.hive.metastore.hbase.TestHBaseImport",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, GumTreeDiff, RD-1x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 6377
+  },
+  {
+    "id": 1119965,
+    "repository": "https://github.com/Netflix/eureka.git",
+    "sha1": "5103ace802b2819438318dd53b5b07512aae0d25",
+    "url": "https://github.com/Netflix/eureka/commit/5103ace802b2819438318dd53b5b07512aae0d25",
+    "author": "Tomasz Bak",
+    "time": "6/17/15 1:22 PM",
+    "refactorings": [
+      {
+        "type": "Rename Method",
+        "description": "Rename Method public testRegistrationAndDiscoveryServices() : void renamed to public testRegistrationAndInterestServices() : void in class com.netflix.eureka2.testkit.embedded.server.EmbeddedWriteServerTest",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, GumTreeDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 2659
+  },
+  {
+    "id": 1121744,
+    "repository": "https://github.com/scobal/seyren.git",
+    "sha1": "5fb36a321af7df470d4c845cb18da8f85be31c38",
+    "url": "https://github.com/scobal/seyren/commit/5fb36a321af7df470d4c845cb18da8f85be31c38",
+    "author": "alenkacz",
+    "time": "6/20/15 4:49 AM",
+    "refactorings": [
+      {
+        "type": "Rename Method",
+        "description": "Rename Method public subjectIsCorrect() : void renamed to public bodyContainsItemsFromModel() : void in class com.seyren.core.util.velocity.VelocityEmailHelperTest",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefDiff, GumTreeDiff",
+        "validators": "Matin, Davood"
+      }
+    ],
+    "refDiffExecutionTime": 414
+  },
+  {
+    "id": 1122892,
+    "repository": "https://github.com/Netflix/zuul.git",
+    "sha1": "b25d3f32ed2e2da86f5c746098686445c2e2a314",
+    "url": "https://github.com/Netflix/zuul/commit/b25d3f32ed2e2da86f5c746098686445c2e2a314",
+    "author": "Mike Smith",
+    "time": "6/23/15 11:44 PM",
+    "refactorings": [
+      {
+        "type": "Rename Method",
+        "description": "Rename Method public getLocations() : String[] renamed to public getDirectories() : String[] in class com.netflix.zuul.FilterFileManager.FilterFileManagerConfig",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 312
+  },
+  {
+    "id": 1119037,
+    "repository": "https://github.com/apache/pig.git",
+    "sha1": "7a1659c12d76b510809dea1dea1f5100bcf4cd60",
+    "url": "https://github.com/apache/pig/commit/7a1659c12d76b510809dea1dea1f5100bcf4cd60",
+    "author": "Xuefu Zhang",
+    "time": "6/18/15 1:08 AM",
+    "refactorings": [
+      {
+        "type": "Rename Method",
+        "description": "Rename Method private startSparkJob() : void renamed to private addFilesToSparkJob() : void in class org.apache.pig.backend.hadoop.executionengine.spark.SparkLauncher",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, GumTreeDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 2060
+  },
+  {
+    "id": 1126709,
+    "repository": "https://github.com/gradle/gradle.git",
+    "sha1": "79c66ceab11dae0b9fd1dade7bb4120028738705",
+    "url": "https://github.com/gradle/gradle/commit/79c66ceab11dae0b9fd1dade7bb4120028738705",
+    "author": "Lorant Pinter",
+    "time": "6/29/15 5:34 AM",
+    "refactorings": [
+      {
+        "type": "Rename Method",
+        "description": "Rename Method public getAllSources() : Set<LanguageSourceSet> renamed to public getInputs() : Set<LanguageSourceSet> in class org.gradle.nativeplatform.test.internal.DefaultNativeTestSuiteBinarySpec",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, GumTreeDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 0
+  },
+  {
+    "id": 1139036,
+    "repository": "https://github.com/spotify/helios.git",
+    "sha1": "dd8753cfb0f67db4dde6c5254e2df3104b635dae",
+    "url": "https://github.com/spotify/helios/commit/dd8753cfb0f67db4dde6c5254e2df3104b635dae",
+    "author": "Rohan Singh",
+    "time": "7/10/15 6:18 PM",
+    "refactorings": [
+      {
+        "type": "Rename Method",
+        "description": "Rename Method public configDeploymentGroups(name String) : String renamed to public configDeploymentGroup(name String) : String in class com.spotify.helios.servicescommon.coordination.Paths",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, GumTreeDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 0
+  },
+  {
+    "id": 1139097,
+    "repository": "https://github.com/cgeo/cgeo.git",
+    "sha1": "7e7e4f54801af4e49ebddb934d0c6ff33a2c2160",
+    "url": "https://github.com/cgeo/cgeo/commit/7e7e4f54801af4e49ebddb934d0c6ff33a2c2160",
+    "author": "Bananeweizen",
+    "time": "7/12/15 7:01 AM",
+    "refactorings": [
+      {
+        "type": "Rename Method",
+        "description": "Rename Method public testCanHandle() : void renamed to public testHandleTerraCaches() : void in class cgeo.geocaching.connector.tc.TerraCachingConnectorTest",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 2501
+  },
+  {
+    "id": 1141343,
+    "repository": "https://github.com/facebook/buck.git",
+    "sha1": "8184a32a019b2ed956e8f24c18cb49a266af47bf",
+    "url": "https://github.com/facebook/buck/commit/8184a32a019b2ed956e8f24c18cb49a266af47bf",
+    "author": "Shenwei Liu",
+    "time": "7/14/15 12:10 PM",
+    "refactorings": [
+      {
+        "type": "Rename Method",
+        "description": "Rename Method private getDestination(targetNode TargetNode<?>) : Optional<PBXCopyFilesBuildPhase.Destination> renamed to private getDestinationSpec(targetNode TargetNode<?>) : Optional<CopyFilePhaseDestinationSpec> in class com.facebook.buck.apple.ProjectGenerator",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, GumTreeDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 4819
+  },
+  {
+    "id": 1140982,
+    "repository": "https://github.com/JetBrains/intellij-community.git",
+    "sha1": "9f7de200c9aef900596b09327a52d33241a68d9c",
+    "url": "https://github.com/JetBrains/intellij-community/commit/9f7de200c9aef900596b09327a52d33241a68d9c",
+    "author": "Roman Shevchenko",
+    "time": "7/14/15 4:07 PM",
+    "refactorings": [
+      {
+        "type": "Rename Method",
+        "description": "Rename Method public testAnyType() : void renamed to public testAnyTypeParams() : void in class com.intellij.lang.java.parser.partial.ReferenceParserTest",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 37767
+  },
+  {
+    "id": 1141018,
+    "repository": "https://github.com/JetBrains/intellij-community.git",
+    "sha1": "106d1d51754f454fa673976665e41f463316e084",
+    "url": "https://github.com/JetBrains/intellij-community/commit/106d1d51754f454fa673976665e41f463316e084",
+    "author": "Roman Shevchenko",
+    "time": "7/14/15 10:55 AM",
+    "refactorings": [
+      {
+        "type": "Rename Method",
+        "description": "Rename Method public testAnyType() : void renamed to public testAnyTypeParams() : void in class com.intellij.lang.java.parser.partial.ReferenceParserTest",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 18156
+  },
+  {
+    "id": 1120602,
+    "repository": "https://github.com/open-keychain/open-keychain.git",
+    "sha1": "de50b3becb31c367f867382ff9cd898ba1628350",
+    "url": "https://github.com/open-keychain/open-keychain/commit/de50b3becb31c367f867382ff9cd898ba1628350",
+    "author": "Adithya Abraham Philip",
+    "time": "6/20/15 3:42 PM",
+    "refactorings": [
+      {
+        "type": "Rename Method",
+        "description": "Rename Method private handleMessage(message Message) : void renamed to private handleResult(result ImportKeyResult) : void in class org.sufficientlysecure.keychain.ui.ImportKeysActivity",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, GumTreeDiff, RD-1x, RD-2x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 0
+  },
+  {
+    "id": 1127199,
+    "repository": "https://github.com/koush/AndroidAsync.git",
+    "sha1": "1bc7905b07821f840068089343e6b77a8686d1ab",
+    "url": "https://github.com/koush/AndroidAsync/commit/1bc7905b07821f840068089343e6b77a8686d1ab",
+    "author": "Koushik Dutta",
+    "time": "6/28/15 6:25 PM",
+    "refactorings": [
+      {
+        "type": "Rename Method",
+        "description": "Rename Method package spew() : void renamed to package sendCachedData() : void in class com.koushikdutta.async.http.cache.ResponseCacheMiddleware.CachedBodyEmitter",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, GumTreeDiff, RD-1x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 570
+  },
+  {
+    "id": 1136870,
+    "repository": "https://github.com/crate/crate.git",
+    "sha1": "563d281b61e9f8748858e911eaa810e981f1e953",
+    "url": "https://github.com/crate/crate/commit/563d281b61e9f8748858e911eaa810e981f1e953",
+    "author": "dobe",
+    "time": "7/9/15 6:48 AM",
+    "refactorings": [
+      {
+        "type": "Rename Method",
+        "description": "Rename Method public testSelectById() : void renamed to public testSelectByIdWithCustomRouting() : void in class io.crate.analyze.where.WhereClauseAnalyzerTest",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, GumTreeDiff",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 2438
+  },
+  {
+    "id": 1116663,
+    "repository": "https://github.com/facebook/buck.git",
+    "sha1": "1c7c03dd9e6d5810ad22d37ecae59722c219ac35",
+    "url": "https://github.com/facebook/buck/commit/1c7c03dd9e6d5810ad22d37ecae59722c219ac35",
+    "author": "Thomas Gummerer",
+    "time": "6/15/15 5:07 PM",
+    "refactorings": [
+      {
+        "type": "Rename Method",
+        "description": "Rename Method public shouldReturnAnAbsentOptionalIfNoTargetDeviceOptionsSet() : void renamed to public shouldReturnAnAbsentOptionalIfNoTargetDeviceCommandLineOptionsSet() : void in class com.facebook.buck.cli.TargetDeviceCommandLineOptionsTest",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x",
+        "validators": "Matin"
+      }
+    ],
+    "refDiffExecutionTime": 11495
+  },
+  {
+    "id": 1118067,
+    "repository": "https://github.com/Graylog2/graylog2-server.git",
+    "sha1": "2ef067fc70055fc4d55c75937303414ddcf07e0e",
+    "url": "https://github.com/Graylog2/graylog2-server/commit/2ef067fc70055fc4d55c75937303414ddcf07e0e",
+    "author": "Dennis Oelkers",
+    "time": "6/17/15 8:59 AM",
+    "refactorings": [
+      {
+        "type": "Rename Method",
+        "description": "Rename Method public getServerUrl() : URL renamed to private getDefaultServerUrl() : URL in class integration.util.graylog.GraylogControl",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, GumTreeDiff, RD-1x, RD-2x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 0
+  },
+  {
+    "id": 1118645,
+    "repository": "https://github.com/square/okhttp.git",
+    "sha1": "c753d2e41ba667f9b5a31451a16ecbaecdc65d80",
+    "url": "https://github.com/square/okhttp/commit/c753d2e41ba667f9b5a31451a16ecbaecdc65d80",
+    "author": "Jake Wharton",
+    "time": "6/17/15 7:40 PM",
+    "refactorings": [
+      {
+        "type": "Rename Method",
+        "description": "Rename Method package isSpdy() : boolean renamed to package isFramed() : boolean in class com.squareup.okhttp.Connection",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, GumTreeDiff, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 0
+  },
+  {
+    "id": 1120125,
+    "repository": "https://github.com/eucalyptus/eucalyptus.git",
+    "sha1": "5a38d0bca0e48853c3f7c00a0f098bada64797df",
+    "url": "https://github.com/eucalyptus/eucalyptus/commit/5a38d0bca0e48853c3f7c00a0f098bada64797df",
+    "author": "Evan Thomas",
+    "time": "6/17/15 2:26 AM",
+    "refactorings": [
+      {
+        "type": "Rename Method",
+        "description": "Rename Method private addToPutMetricDataList(putMetricDataList List<PutMetricDataType>, cloudWatchSupplier Supplier<InstanceUsageEvent>) : void renamed to private addToQueueItems(queueItems List<AbsoluteMetricQueueItem>, cloudWatchSupplier Supplier<InstanceUsageEvent>) : void in class com.eucalyptus.cluster.callback.cloudwatch.CloudWatchHelper",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x",
+        "validators": "Matin"
+      }
+    ],
+    "refDiffExecutionTime": 2499
+  },
+  {
+    "id": 1121362,
+    "repository": "https://github.com/gradle/gradle.git",
+    "sha1": "f841d8dda2bf461f595755f85c3eba786783702d",
+    "url": "https://github.com/gradle/gradle/commit/f841d8dda2bf461f595755f85c3eba786783702d",
+    "author": "Adam Murdoch",
+    "time": "6/19/15 1:38 AM",
+    "refactorings": [
+      {
+        "type": "Rename Method",
+        "description": "Rename Method public getPayload() : Object renamed to public getFailure() : Throwable in class org.gradle.internal.progress.BuildOperationInternal",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, GumTreeDiff, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 4945
+  },
+  {
+    "id": 1122778,
+    "repository": "https://github.com/hazelcast/hazelcast.git",
+    "sha1": "4d05a3b1168441216dcaea8282c39338285182af",
+    "url": "https://github.com/hazelcast/hazelcast/commit/4d05a3b1168441216dcaea8282c39338285182af",
+    "author": "alarmnummer",
+    "time": "6/22/15 3:53 PM",
+    "refactorings": [
+      {
+        "type": "Rename Method",
+        "description": "Rename Method public notify(response Object) : void renamed to public onResponse(response Object) : void in class com.hazelcast.map.impl.proxy.MapProxySupport.MapExecutionCallbackAdapter",
+        "comment": "<p>There are method invocation replacements confirming it.<br />callback.notify(result);<br />callback.onResponse(result);</p>",
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff",
+        "validators": "Matin, Davood, Nikos"
+      }
+    ],
+    "refDiffExecutionTime": 5152
+  },
+  {
+    "id": 1123103,
+    "repository": "https://github.com/go-lang-plugin-org/go-lang-idea-plugin.git",
+    "sha1": "3d5e343df6a39ce3b41624b90974d83e9899541e",
+    "url": "https://github.com/go-lang-plugin-org/go-lang-idea-plugin/commit/3d5e343df6a39ce3b41624b90974d83e9899541e",
+    "author": "Alexander Zolotov",
+    "time": "6/23/15 4:19 PM",
+    "refactorings": [
+      {
+        "type": "Rename Method",
+        "description": "Rename Method public getVariants() : Object[] renamed to public processResolveVariants(processor GoScopeProcessor) : void in class com.goide.psi.impl.GoVarReference",
+        "comment": "<p>getVariants() now has default implementation in the super class (GoCachedReference), and the rename is not observed in the abstract super class.</p>",
+        "validation": "TP",
+        "detectionTools": "RefDiff",
+        "validators": "Davood, Nikos"
+      }
+    ],
+    "refDiffExecutionTime": 849
+  },
+  {
+    "id": 1129713,
+    "repository": "https://github.com/gradle/gradle.git",
+    "sha1": "527ac38334000e105daacb2aca25cb345d77c01e",
+    "url": "https://github.com/gradle/gradle/commit/527ac38334000e105daacb2aca25cb345d77c01e",
+    "author": "Gary Hale",
+    "time": "6/30/15 9:10 AM",
+    "refactorings": [
+      {
+        "type": "Rename Method",
+        "description": "Rename Method public setDeploymentId(deploymentId String) : void renamed to public setPlayToolProvider(playToolProvider PlayToolProvider) : void in class org.gradle.play.tasks.PlayRun",
+        "comment": "<p>playRun.setDeploymentRegistry(deploymentRegistry);<br /> playRun.setDeploymentId(deploymentId);<br />replaced with<br /><br /></p>",
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, GumTreeDiff",
+        "validators": "Nikos, Ameya"
+      }
+    ],
+    "refDiffExecutionTime": 5368
+  },
+  {
+    "id": 1132974,
+    "repository": "https://github.com/hazelcast/hazelcast.git",
+    "sha1": "c00275e7f85c8a9af5785f66cc0f75dc027b6cb6",
+    "url": "https://github.com/hazelcast/hazelcast/commit/c00275e7f85c8a9af5785f66cc0f75dc027b6cb6",
+    "author": "mustafaiman",
+    "time": "7/6/15 5:59 AM",
+    "refactorings": [
+      {
+        "type": "Rename Method",
+        "description": "Rename Method public Init() : void renamed to public init() : void in class com.hazelcast.jca.XATransactionTest",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, GumTreeDiff, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 2426
+  },
+  {
+    "id": 1135734,
+    "repository": "https://github.com/google/closure-compiler.git",
+    "sha1": "b9a17665b158955ad28ef7f50cc0a8585460f053",
+    "url": "https://github.com/google/closure-compiler/commit/b9a17665b158955ad28ef7f50cc0a8585460f053",
+    "author": "tbreisacher",
+    "time": "7/7/15 1:21 PM",
+    "refactorings": [
+      {
+        "type": "Rename Method",
+        "description": "Rename Method private createTaggedTemplateLiteral(t NodeTraversal, n Node) : void renamed to package visitTaggedTemplateLiteral(t NodeTraversal, n Node) : void in class com.google.javascript.jscomp.Es6TemplateLiterals",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 2970
+  },
+  {
+    "id": 1137397,
+    "repository": "https://github.com/hazelcast/hazelcast.git",
+    "sha1": "69dd55c93fc99c5f7a1e2c21f10e671e311be49e",
+    "url": "https://github.com/hazelcast/hazelcast/commit/69dd55c93fc99c5f7a1e2c21f10e671e311be49e",
+    "author": "Marko Topolnik",
+    "time": "7/10/15 5:19 AM",
+    "refactorings": [
+      {
+        "type": "Rename Method",
+        "description": "Rename Method public getOrDefault(key int, supplier Supplier<V>) : V renamed to public computeIfAbsent(key int, mappingFunction IntFunction<? extends V>) : V in class com.hazelcast.util.collection.Int2ObjectHashMap",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-2x",
+        "validators": "Matin, Davood"
+      }
+    ],
+    "refDiffExecutionTime": 1599
+  },
+  {
+    "id": 1139380,
+    "repository": "https://github.com/square/javapoet.git",
+    "sha1": "5a37c2aa596377cb4c9b6f916614407fd0a7d3db",
+    "url": "https://github.com/square/javapoet/commit/5a37c2aa596377cb4c9b6f916614407fd0a7d3db",
+    "author": "Thomas Broyer",
+    "time": "7/10/15 11:56 AM",
+    "refactorings": [
+      {
+        "type": "Rename Method",
+        "description": "Rename Method private getElement(clazz Class<?>) : TypeElement renamed to protected getElements() : Elements in class com.squareup.javapoet.TypesTest",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff",
+        "validators": "Matin, Laleh, Davood, Nikos"
+      }
+    ],
+    "refDiffExecutionTime": 0
+  },
+  {
+    "id": 1141077,
+    "repository": "https://github.com/spring-projects/spring-security.git",
+    "sha1": "fcc9a34356817d93c24b5ccf3107ec234a28b136",
+    "url": "https://github.com/spring-projects/spring-security/commit/fcc9a34356817d93c24b5ccf3107ec234a28b136",
+    "author": "Rob Winch",
+    "time": "7/14/15 4:49 PM",
+    "refactorings": [
+      {
+        "type": "Rename Method",
+        "description": "Rename Method private doSaveContext() : void renamed to protected onResponseCommitted() : void in class org.springframework.security.web.context.SaveContextOnUpdateOrErrorResponseWrapper",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-2x",
+        "validators": "Matin, Davood"
+      }
+    ],
+    "refDiffExecutionTime": 4803
+  },
+  {
+    "id": 1153435,
+    "repository": "https://github.com/ReactiveX/RxJava.git",
+    "sha1": "8ad226067434cd39ce493b336bd0659778625959",
+    "url": "https://github.com/ReactiveX/RxJava/commit/8ad226067434cd39ce493b336bd0659778625959",
+    "author": "Yuya Tanaka",
+    "time": "7/29/15 2:36 PM",
+    "refactorings": [
+      {
+        "type": "Rename Method",
+        "description": "Rename Method private createObservable() : Observable<Void> renamed to private createNeverObservable() : Observable<Void> in class rx.observables.BlockingObservableTest.InterruptionTests",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, GumTreeDiff",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 1615
+  },
+  {
+    "id": 1141078,
+    "repository": "https://github.com/spring-projects/spring-security.git",
+    "sha1": "08b1b56e2cd5ad72126f4bbeb15a47d9b104dfff",
+    "url": "https://github.com/spring-projects/spring-security/commit/08b1b56e2cd5ad72126f4bbeb15a47d9b104dfff",
+    "author": "Rob Winch",
+    "time": "7/14/15 4:48 PM",
+    "refactorings": [
+      {
+        "type": "Rename Method",
+        "description": "Rename Method private doSaveContext() : void renamed to protected onResponseCommitted() : void in class org.springframework.security.web.context.SaveContextOnUpdateOrErrorResponseWrapper",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-2x",
+        "validators": "Matin, Davood"
+      }
+    ],
+    "refDiffExecutionTime": 764
+  },
+  {
+    "id": 1159847,
+    "repository": "https://github.com/apache/camel.git",
+    "sha1": "c30deabcaed4726bce4371d76257db63f2eba87c",
+    "url": "https://github.com/apache/camel/commit/c30deabcaed4726bce4371d76257db63f2eba87c",
+    "author": "Otavio Rodolfo Piske",
+    "time": "11/25/21 4:56 AM",
+    "refactorings": [
+      {
+        "type": "Rename Method",
+        "description": "Rename Method public testTransferExeption() : void renamed to public testTransferException() : void in class org.apache.camel.component.jms.JmsTransferExceptionTest",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": null
+  },
+  {
+    "id": 1107345,
+    "repository": "https://github.com/JetBrains/intellij-community.git",
+    "sha1": "219d6ddfd1db62c11efb57e0216436874e087834",
+    "url": "https://github.com/JetBrains/intellij-community/commit/219d6ddfd1db62c11efb57e0216436874e087834",
+    "author": "Michael Golubev",
+    "time": "6/10/15 4:04 PM",
+    "refactorings": [
+      {
+        "type": "Rename Method",
+        "description": "Rename Method public getLoggingHandler() : LoggingHandlerImpl renamed to public getComponent() : JComponent in class com.intellij.remoteServer.impl.runtime.ui.tree.ServersTreeStructure.DeploymentNodeImpl",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, GumTreeDiff, RD-1x, RD-2x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 14854
+  },
+  {
+    "id": 1117875,
+    "repository": "https://github.com/Netflix/eureka.git",
+    "sha1": "457a7f637ddb226acf477cae0b04c8ff16ec9a50",
+    "url": "https://github.com/Netflix/eureka/commit/457a7f637ddb226acf477cae0b04c8ff16ec9a50",
+    "author": "David Liu",
+    "time": "6/15/15 10:22 PM",
+    "refactorings": [
+      {
+        "type": "Rename Method",
+        "description": "Rename Method public setupDiscoveryClient(clientInstanceInfo InstanceInfo) : EurekaClient renamed to public setupInjector(clientInstanceInfo InstanceInfo) : EurekaClient in class com.netflix.discovery.DiscoveryClientRule",
+        "comment": "<p>The method have an identical body</p>",
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, GumTreeDiff",
+        "validators": "Nikos"
+      }
+    ],
+    "refDiffExecutionTime": 766
+  },
+  {
+    "id": 1121417,
+    "repository": "https://github.com/languagetool-org/languagetool.git",
+    "sha1": "bec15926deb49d2b3f7b979d4cfc819947a434ec",
+    "url": "https://github.com/languagetool-org/languagetool/commit/bec15926deb49d2b3f7b979d4cfc819947a434ec",
+    "author": "Andriy Rysin",
+    "time": "6/21/15 12:33 PM",
+    "refactorings": [
+      {
+        "type": "Rename Method",
+        "description": "Rename Method private hasRequiredPosTag(posTagsToFind Collection<String>, tokenReadings AnalyzedTokenReadings) : boolean renamed to private getReadingWithVidmPosTag(posTagsToFind Collection<String>, tokenReadings AnalyzedTokenReadings) : boolean in class org.languagetool.rules.uk.TokenAgreementRule",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 0
+  },
+  {
+    "id": 1149802,
+    "repository": "https://github.com/neo4j/neo4j.git",
+    "sha1": "4712de476aabe69cd762233c9641dd3cf9f8361b",
+    "url": "https://github.com/neo4j/neo4j/commit/4712de476aabe69cd762233c9641dd3cf9f8361b",
+    "author": "Anton Persson",
+    "time": "7/23/15 10:19 AM",
+    "refactorings": [
+      {
+        "type": "Rename Method",
+        "description": "Rename Method protected runInternalArnoldi(iterations int) : int renamed to protected runInternalIteration() : int in class org.neo4j.graphalgo.impl.centrality.EigenvectorCentralityArnoldi",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, GumTreeDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 11263
+  },
+  {
+    "id": 1123736,
+    "repository": "https://github.com/facebook/buck.git",
+    "sha1": "cfea606b129dbfc5703eb279d4803185afc99c58",
+    "url": "https://github.com/facebook/buck/commit/cfea606b129dbfc5703eb279d4803185afc99c58",
+    "author": "Natthu Bharambe",
+    "time": "6/24/15 1:08 PM",
+    "refactorings": [
+      {
+        "type": "Rename Method",
+        "description": "Rename Method public getPathToJSBundleDir() : Path renamed to public getJSBundleDir() : Path in class com.facebook.buck.js.ReactNativeBundle",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 3024
+  },
+  {
+    "id": 1124370,
+    "repository": "https://github.com/aws/aws-sdk-java.git",
+    "sha1": "4baf0a4de8d03022df48d696d210cc8b3117d38a",
+    "url": "https://github.com/aws/aws-sdk-java/commit/4baf0a4de8d03022df48d696d210cc8b3117d38a",
+    "author": "AWS",
+    "time": "6/24/15 8:54 PM",
+    "refactorings": [
+      {
+        "type": "Rename Method",
+        "description": "Rename Method private callUntilCompletion(batch Map<String,List<WriteRequest>>) : FailedBatch renamed to private doBatchWriteItemWithRetry(batch Map<String,List<WriteRequest>>, batchWriteRetryStrategy BatchWriteRetryStrategy) : FailedBatch in class com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, GumTreeDiff, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 0
+  },
+  {
+    "id": 1106350,
+    "repository": "https://github.com/puniverse/quasar.git",
+    "sha1": "56d4b999e8be70be237049708f019c278c356e71",
+    "url": "https://github.com/puniverse/quasar/commit/56d4b999e8be70be237049708f019c278c356e71",
+    "author": "circlespainter",
+    "time": "6/8/15 3:49 PM",
+    "refactorings": [
+      {
+        "type": "Rename Method",
+        "description": "Rename Method private isNonSuspendable(clazz Class, methodName String) : boolean renamed to private isSuspendable(clazz Class, methodName String) : boolean in class co.paralleluniverse.fibers.Fiber",
+        "comment": "The method is name is changed since the functionality is changed | Davood: The method is called in (almost) the same place than the older one, I mark it as TP",
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, GumTreeDiff, RD-1x, RD-2x",
+        "validators": "Matin, Davood"
+      }
+    ],
+    "refDiffExecutionTime": 970
+  },
+  {
+    "id": 1152026,
+    "repository": "https://github.com/bitcoinj/bitcoinj.git",
+    "sha1": "7744a00629514b9539acac05596d64af878fe747",
+    "url": "https://github.com/bitcoinj/bitcoinj/commit/7744a00629514b9539acac05596d64af878fe747",
+    "author": "Andreas Schildbach",
+    "time": "7/28/15 5:14 PM",
+    "refactorings": [
+      {
+        "type": "Rename Method",
+        "description": "Rename Method public testTransactionsLazyRetain() : void renamed to public testTransactionsRetain() : void in class org.bitcoinj.core.ParseByteCacheTest",
+        "comment": "<p>Matin: FP</p><p>Nikos: The method bodies are identical with only one parameter removed.</p>",
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x",
+        "validators": "Matin, Nikos"
+      }
+    ],
+    "refDiffExecutionTime": 1735
+  },
+  {
+    "id": 1107713,
+    "repository": "https://github.com/SonarSource/sonarqube.git",
+    "sha1": "091ec857d24bfe139d2a5ce143ffc9b32b21cd7c",
+    "url": "https://github.com/SonarSource/sonarqube/commit/091ec857d24bfe139d2a5ce143ffc9b32b21cd7c",
+    "author": "Julien Lancelot",
+    "time": "6/10/15 9:30 AM",
+    "refactorings": [
+      {
+        "type": "Rename Method",
+        "description": "Rename Method public fail_to_get_periods_if_not_initialized() : void renamed to public get_periods_throws_illegal_state_exception_if_not_initialized() : void in class org.sonar.server.computation.period.PeriodsHolderImplTest",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, GumTreeDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 2491
+  },
+  {
+    "id": 1141324,
+    "repository": "https://github.com/facebook/buck.git",
+    "sha1": "52cfd39ecba349c4d8e2c46eac76ed4d75b7ebae",
+    "url": "https://github.com/facebook/buck/commit/52cfd39ecba349c4d8e2c46eac76ed4d75b7ebae",
+    "author": "Shenwei Liu",
+    "time": "7/14/15 9:46 PM",
+    "refactorings": [
+      {
+        "type": "Rename Method",
+        "description": "Rename Method public appleSdkPathsBuiltFromDirectory() : void renamed to public iphoneOSSdkPathsBuiltFromDirectory() : void in class com.facebook.buck.apple.AppleCxxPlatformsTest",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, GumTreeDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 2947
+  },
+{
+    "id": 1124507,
+    "repository": "https://github.com/gwtproject/gwt.git",
+    "sha1": "22fb2c9c6974bd1fe0f6ff684f52e6cfbed1a387",
+    "url": "https://github.com/gwtproject/gwt/commit/22fb2c9c6974bd1fe0f6ff684f52e6cfbed1a387",
+    "author": "Goktug Gokdogan",
+    "time": "6/24/15 6:41 PM",
+    "refactorings": [ {
+        "type": "Rename Method",
+        "description": "Rename Method private rescueMembersIfInstantiable(type JDeclaredType) : void renamed to private rescueMembersAndInstantiateSuperInterfaces(type JDeclaredType) : void in class com.google.gwt.dev.jjs.impl.ControlFlowAnalyzer.RescueVisitor",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner",
+        "validators": null
+    }],
+    "refDiffExecutionTime": 6656
+  },
+  {
+    "id": 1148549,
+    "repository": "https://github.com/apache/cassandra.git",
+    "sha1": "5790b4a44ba85e7e8ece64613d9e6a1b737a6cde",
+    "url": "https://github.com/apache/cassandra/commit/5790b4a44ba85e7e8ece64613d9e6a1b737a6cde",
+    "author": "Robert Stupp",
+    "time": "7/24/15 6:37 AM",
+    "refactorings": [
+      {
+        "type": "Rename Method",
+        "description": "Rename Method package buildUDF(name FunctionName, argNames List<ColumnIdentifier>, argTypes List<AbstractType<?>>, returnType AbstractType<?>, calledOnNullInput boolean, body String) : UDFunction renamed to package JavaBasedUDFunction(name FunctionName, argNames List<ColumnIdentifier>, argTypes List<AbstractType<?>>, returnType AbstractType<?>, calledOnNullInput boolean, body String) in class org.apache.cassandra.cql3.functions.JavaBasedUDFunction",
+        "comment": "Matin:TP",
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x",
+        "validators": "Matin, Laleh, Davood"
+      }
+    ],
+    "refDiffExecutionTime": 3887
+  },
+  {
+    "id": 1150670,
+    "repository": "https://github.com/neo4j/neo4j.git",
+    "sha1": "03ece4f24163204d8a3948eb53576f1feaa86a61",
+    "url": "https://github.com/neo4j/neo4j/commit/03ece4f24163204d8a3948eb53576f1feaa86a61",
+    "author": "Chris Vest",
+    "time": "7/27/15 6:06 AM",
+    "refactorings": [
+      {
+        "type": "Rename Method",
+        "description": "Rename Method protected releaseFileLockAndCloseFileChannel() : void renamed to protected closeFileChannel() : void in class org.neo4j.kernel.impl.store.CommonAbstractStore",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, GumTreeDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 4635
+  },
+  {
+    "id": 1151667,
+    "repository": "https://github.com/hazelcast/hazelcast.git",
+    "sha1": "204bf49cba03fe5d581a35ff82dd22587a681f46",
+    "url": "https://github.com/hazelcast/hazelcast/commit/204bf49cba03fe5d581a35ff82dd22587a681f46",
+    "author": "Mehmet Dogan",
+    "time": "7/28/15 4:32 AM",
+    "refactorings": [
+      {
+        "type": "Rename Method",
+        "description": "Rename Method public testTcpIp__ClusterMerge() : void renamed to public testTcpIp_ClusterMerge() : void in class com.hazelcast.cluster.SplitBrainHandlerTest",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, GumTreeDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 3496
+  },
+  {
+    "id": 1116810,
+    "repository": "https://github.com/codinguser/gnucash-android.git",
+    "sha1": "bba4af3f52064b5a2de2c9a57f9d34ba67dcdd8c",
+    "url": "https://github.com/codinguser/gnucash-android/commit/bba4af3f52064b5a2de2c9a57f9d34ba67dcdd8c",
+    "author": "Ngewi Fet",
+    "time": "6/16/15 6:15 AM",
+    "refactorings": [
+      {
+        "type": "Rename Method",
+        "description": "Rename Method public testAddAccountWithTransaction() : void renamed to public shouldAddAccountsToDatabase() : void in class org.gnucash.android.test.unit.db.AccountsDbAdapterTest",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, GumTreeDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 766
+  },
+  {
+    "id": 1132674,
+    "repository": "https://github.com/orientechnologies/orientdb.git",
+    "sha1": "f50f234b24e6ada29c82ce57830118508bf55d51",
+    "url": "https://github.com/orientechnologies/orientdb/commit/f50f234b24e6ada29c82ce57830118508bf55d51",
+    "author": "laa",
+    "time": "7/6/15 10:20 AM",
+    "refactorings": [
+      {
+        "type": "Rename Method",
+        "description": "Rename Method public getAllocatedPages() : long renamed to public getExclusiveWriteCachePagesSize() : long in class com.orientechnologies.orient.core.storage.cache.OWriteCache",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, GumTreeDiff",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 5282
+  },
+  {
+    "id": 1159843,
+    "repository": "https://github.com/checkstyle/checkstyle.git",
+    "sha1": "0a1a4c6e94c9b3b73b21b323f14ae7b7337b1b44",
+    "url": "https://github.com/checkstyle/checkstyle/commit/0a1a4c6e94c9b3b73b21b323f14ae7b7337b1b44",
+    "author": "MEZk",
+    "time": "3/29/16 6:47 PM",
+    "refactorings": [
+      {
+        "type": "Rename Method",
+        "description": "Rename Method private markFinalVariableCandidateAsAssignInElseBlock(ast DetailAST) : void renamed to private markFinalVariableCandidateAsAssignedInElseBlock(ast DetailAST) : void in class com.puppycrawl.tools.checkstyle.checks.coding.FinalLocalVariableCheck",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": null
+  },
+  {
+    "id": 1117885,
+    "repository": "https://github.com/apache/cassandra.git",
+    "sha1": "ec52e77ecde749e7c5a483b26cbd8041f2a5a33c",
+    "url": "https://github.com/apache/cassandra/commit/ec52e77ecde749e7c5a483b26cbd8041f2a5a33c",
+    "author": "Benedict Elliott Smith",
+    "time": "6/16/15 12:28 PM",
+    "refactorings": [
+      {
+        "type": "Extract Method",
+        "description": "Extract Method public submitBackground(cfs ColumnFamilyStore, autoFill boolean) : List<Future<?>> extracted from public submitBackground(cfs ColumnFamilyStore) : List<Future<?>> in class org.apache.cassandra.db.compaction.CompactionManager",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 6099
+  },
+  {
+    "id": 1148565,
+    "repository": "https://github.com/apache/cassandra.git",
+    "sha1": "2b0a8f6bdac621badabcb9921c077260f2470c26",
+    "url": "https://github.com/apache/cassandra/commit/2b0a8f6bdac621badabcb9921c077260f2470c26",
+    "author": "Sylvain Lebresne",
+    "time": "7/23/15 4:00 AM",
+    "refactorings": [
+      {
+        "type": "Extract Method",
+        "description": "Extract Method public deleteRowAt(metadata CFMetaData, timestamp long, localDeletionTime int, key Object, clusteringValues Object...) : Mutation extracted from public deleteRow(metadata CFMetaData, timestamp long, key Object, clusteringValues Object...) : Mutation in class org.apache.cassandra.db.RowUpdateBuilder",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 6434
+  },
+  {
+    "id": 1148572,
+    "repository": "https://github.com/apache/cassandra.git",
+    "sha1": "b70f7ea0ce27b5defa0a7773d448732364e7aee0",
+    "url": "https://github.com/apache/cassandra/commit/b70f7ea0ce27b5defa0a7773d448732364e7aee0",
+    "author": "Paulo Motta",
+    "time": "7/22/15 12:11 AM",
+    "refactorings": [
+      {
+        "type": "Extract Method",
+        "description": "Extract Method private listSnapshots() : List<File> extracted from public getSnapshotDetails() : Map<String,Pair<Long,Long>> in class org.apache.cassandra.db.Directories",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 3298
+  },
+  {
+    "id": 1111363,
+    "repository": "https://github.com/spring-projects/spring-data-rest.git",
+    "sha1": "b7cba6a700d8c5e456cdeffe9c5bf54563eab7d3",
+    "url": "https://github.com/spring-projects/spring-data-rest/commit/b7cba6a700d8c5e456cdeffe9c5bf54563eab7d3",
+    "author": "Greg Turnquist",
+    "time": "6/15/15 10:32 AM",
+    "refactorings": [
+      {
+        "type": "Extract Method",
+        "description": "Extract Method protected setupMockMvc() : void extracted from public setUp() : void in class org.springframework.data.rest.webmvc.AbstractWebIntegrationTests",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 0
+  },
+  {
+    "id": 1139995,
+    "repository": "https://github.com/spring-projects/spring-security.git",
+    "sha1": "64938ebcfc2fc8cd9ccd6cf31dbcd8cdd0660aca",
+    "url": "https://github.com/spring-projects/spring-security/commit/64938ebcfc2fc8cd9ccd6cf31dbcd8cdd0660aca",
+    "author": "Rob Winch",
+    "time": "7/14/15 12:45 AM",
+    "refactorings": [
+      {
+        "type": "Extract Method",
+        "description": "Extract Method public createExpressionMessageMetadataSource(matcherToExpression LinkedHashMap<MessageMatcher<?>,String>, handler SecurityExpressionHandler<Message<Object>>) : MessageSecurityMetadataSource extracted from public createExpressionMessageMetadataSource(matcherToExpression LinkedHashMap<MessageMatcher<?>,String>) : MessageSecurityMetadataSource in class org.springframework.security.messaging.access.expression.ExpressionBasedMessageSecurityMetadataSourceFactory",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 6646
+  },
+  {
+    "id": 1102793,
+    "repository": "https://github.com/crashub/crash.git",
+    "sha1": "2801269c7e47bd6e243612654a74cee809d20959",
+    "url": "https://github.com/crashub/crash/commit/2801269c7e47bd6e243612654a74cee809d20959",
+    "author": "Oliver Trosien",
+    "time": "6/7/15 11:15 PM",
+    "refactorings": [
+      {
+        "type": "Extract Method",
+        "description": "Extract Method private convertPemKeyPair(pemKeyPair PEMKeyPair) : KeyPair extracted from public loadKeys() : Iterable<KeyPair> in class org.crsh.auth.FilePublicKeyProvider",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 417
+  },
+  {
+    "id": 1151109,
+    "repository": "https://github.com/selendroid/selendroid.git",
+    "sha1": "e4a309c160285708f917ea23238573da3b677f7f",
+    "url": "https://github.com/selendroid/selendroid/commit/e4a309c160285708f917ea23238573da3b677f7f",
+    "author": "Viacheslav Frolov",
+    "time": "7/27/15 8:36 AM",
+    "refactorings": [
+      {
+        "type": "Extract Method",
+        "description": "Extract Method protected toByteArray(image BufferedImage) : byte[] extracted from public takeScreenshot() : byte[] in class io.selendroid.standalone.android.impl.AbstractDevice",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 387
+  },
+  {
+    "id": 1117635,
+    "repository": "https://github.com/facebook/buck.git",
+    "sha1": "f26d234e8d3458f34454583c22e3bd5f4b2a5da8",
+    "url": "https://github.com/facebook/buck/commit/f26d234e8d3458f34454583c22e3bd5f4b2a5da8",
+    "author": "Thomas Gummerer",
+    "time": "6/16/15 4:56 PM",
+    "refactorings": [
+      {
+        "type": "Extract Method",
+        "description": "Extract Method public getDevices() : List<IDevice> extracted from public adbCall(adbCallable AdbCallable) : boolean in class com.facebook.buck.android.AdbHelper",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 2012
+  },
+  {
+    "id": 1147442,
+    "repository": "https://github.com/facebook/buck.git",
+    "sha1": "db024f5ec3e9611ddf8103bdc4c3817c704f7b27",
+    "url": "https://github.com/facebook/buck/commit/db024f5ec3e9611ddf8103bdc4c3817c704f7b27",
+    "author": "Miguel Augusto Pereira de Oliveira",
+    "time": "7/24/15 9:44 AM",
+    "refactorings": [
+      {
+        "type": "Extract Method",
+        "description": "Extract Method public getTargetsAndDependencies(params CommandRunnerParams, argumentsFormattedAsBuildTargets List<String>, showTransitive boolean, showTests boolean, enableProfiling boolean) : Multimap<BuildTarget,BuildTarget> extracted from public runWithoutHelp(params CommandRunnerParams) : int in class com.facebook.buck.cli.AuditDependenciesCommand",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 3123
+  },
+  {
+    "id": 1147466,
+    "repository": "https://github.com/facebook/buck.git",
+    "sha1": "a1525ac9a0bb8f727167a8be94c81a3415128ef4",
+    "url": "https://github.com/facebook/buck/commit/a1525ac9a0bb8f727167a8be94c81a3415128ef4",
+    "author": "Al Sutton",
+    "time": "7/24/15 7:16 AM",
+    "refactorings": [
+      {
+        "type": "Extract Method",
+        "description": "Extract Method private getAllPathsWork(workingDir Path) : ImmutableBiMap<Path,Path> extracted from private getAllPaths(workingDir Optional<Path>) : ImmutableBiMap<Path,Path> in class com.facebook.buck.cxx.DebugPathSanitizer",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 6724
+  },
+  {
+    "id": 1155076,
+    "repository": "https://github.com/facebook/buck.git",
+    "sha1": "6c93f15f502f39dff99ecb01b56dcad7dddb0f0d",
+    "url": "https://github.com/facebook/buck/commit/6c93f15f502f39dff99ecb01b56dcad7dddb0f0d",
+    "author": "Martin Kosiba",
+    "time": "7/31/15 3:01 PM",
+    "refactorings": [
+      {
+        "type": "Extract Method",
+        "description": "Extract Method package getEnumerator(rType RType) : ResourceIdEnumerator extracted from public addIntResourceIfNotPresent(rType RType, name String) : void in class com.facebook.buck.android.aapt.AaptResourceCollector",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 2288
+  },
+  {
+    "id": 1159248,
+    "repository": "https://github.com/facebook/buck.git",
+    "sha1": "89973a5e4f188040c5fcf87fb5a3e9167329d175",
+    "url": "https://github.com/facebook/buck/commit/89973a5e4f188040c5fcf87fb5a3e9167329d175",
+    "author": "Mark Wang",
+    "time": "8/6/15 7:45 PM",
+    "refactorings": [
+      {
+        "type": "Extract Method",
+        "description": "Extract Method private installAppleBundleForSimulator(params CommandRunnerParams, appleBundle AppleBundle, projectFilesystem ProjectFilesystem, processExecutor ProcessExecutor) : InstallResult extracted from private installAppleBundle(params CommandRunnerParams, appleBundle AppleBundle, projectFilesystem ProjectFilesystem, processExecutor ProcessExecutor) : InstallResult in class com.facebook.buck.cli.InstallCommand",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 4629
+  },
+  {
+    "id": 1159266,
+    "repository": "https://github.com/facebook/buck.git",
+    "sha1": "8d14e557e01cc607dd2db66c29d106ef01aa81f7",
+    "url": "https://github.com/facebook/buck/commit/8d14e557e01cc607dd2db66c29d106ef01aa81f7",
+    "author": "Ben Hamilton",
+    "time": "8/6/15 7:42 PM",
+    "refactorings": [
+      {
+        "type": "Extract Method",
+        "description": "Extract Method public get(buildTarget BuildTarget, eventBus Optional<BuckEventBus>) : TargetNode<?> extracted from public get(buildTarget BuildTarget) : TargetNode<?> in class com.facebook.buck.parser.Parser.CachedState",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 2848
+  },
+  {
+    "id": 1137182,
+    "repository": "https://github.com/HubSpot/Singularity.git",
+    "sha1": "944aea445051891280a8ab7fbbd514c19646f1ab",
+    "url": "https://github.com/HubSpot/Singularity/commit/944aea445051891280a8ab7fbbd514c19646f1ab",
+    "author": "Whitney Sorenson",
+    "time": "7/9/15 7:21 PM",
+    "refactorings": [
+      {
+        "type": "Extract Method",
+        "description": "Extract Method protected launchTask(request SingularityRequest, deploy SingularityDeploy, launchTime long, updateTime long, instanceNo int, initialTaskState TaskState) : SingularityTask extracted from protected launchTask(request SingularityRequest, deploy SingularityDeploy, launchTime long, instanceNo int, initialTaskState TaskState) : SingularityTask in class com.hubspot.singularity.SingularitySchedulerTestBase",
+        "comment": "<p>Add Parameter updateTime : long in method protected launchTask(request SingularityRequest, deploy SingularityDeploy, launchTime long, updateTime long, instanceNo int, initialTaskState TaskState) : SingularityTask from class com.hubspot.singularity.SingularitySchedulerTestBase</p>",
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": "Nikos"
+      }
+    ],
+    "refDiffExecutionTime": 838
+  },
+  {
+    "id": 1123527,
+    "repository": "https://github.com/structr/structr.git",
+    "sha1": "6c59050b8b03adf6d8043f3fb7add0496f447edf",
+    "url": "https://github.com/structr/structr/commit/6c59050b8b03adf6d8043f3fb7add0496f447edf",
+    "author": "Axel Morgner",
+    "time": "6/24/15 10:45 AM",
+    "refactorings": [
+      {
+        "type": "Extract Method",
+        "description": "Extract Method private getSchemaProperties(schemaNode SchemaNode) : List<SchemaProperty> extracted from private getPropertiesForView(type Class, view String, schemaNode SchemaNode) : Map<String,Object> in class org.structr.rest.resource.SchemaTypeResource",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 1425
+  },
+  {
+    "id": 1139781,
+    "repository": "https://github.com/structr/structr.git",
+    "sha1": "15afd616cba5fb3d432d11a6de0d4f7805b202db",
+    "url": "https://github.com/structr/structr/commit/15afd616cba5fb3d432d11a6de0d4f7805b202db",
+    "author": "Christian Morgner",
+    "time": "7/13/15 4:05 PM",
+    "refactorings": [
+      {
+        "type": "Extract Method",
+        "description": "Extract Method package handleObject(nodeFactory NodeFactory, relFactory RelationshipFactory, key String, value Object, includeHiddenAndDeleted boolean, publicOnly boolean, level int) : Object extracted from public execute(query String, parameters Map<String,Object>, includeHiddenAndDeleted boolean, publicOnly boolean) : List<GraphObject> in class org.structr.core.graph.CypherQueryCommand",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 2025
+  },
+  {
+    "id": 1112624,
+    "repository": "https://github.com/spring-projects/spring-boot.git",
+    "sha1": "1cfc6f64f64353bc5530a8ce8cdacfc3eba3e7b2",
+    "url": "https://github.com/spring-projects/spring-boot/commit/1cfc6f64f64353bc5530a8ce8cdacfc3eba3e7b2",
+    "author": "Oliver Gierke",
+    "time": "6/15/15 4:21 PM",
+    "refactorings": [
+      {
+        "type": "Extract Method",
+        "description": "Extract Method private addEntityScanBeanPostProcessor(registry BeanDefinitionRegistry, packagesToScan Set<String>) : void extracted from public registerBeanDefinitions(importingClassMetadata AnnotationMetadata, registry BeanDefinitionRegistry) : void in class org.springframework.boot.orm.jpa.EntityScanRegistrar",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 1019
+  },
+  {
+    "id": 1112627,
+    "repository": "https://github.com/spring-projects/spring-boot.git",
+    "sha1": "20d39f7af2165c67d5221f556f58820c992d2cc6",
+    "url": "https://github.com/spring-projects/spring-boot/commit/20d39f7af2165c67d5221f556f58820c992d2cc6",
+    "author": "Phillip Webb",
+    "time": "6/15/15 3:31 PM",
+    "refactorings": [
+      {
+        "type": "Extract Method",
+        "description": "Extract Method private getFullKey(path String, key String) : String extracted from private flatten(properties Properties, input Map<String,Object>, path String) : void in class org.springframework.boot.cloudfoundry.VcapApplicationListener",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 4633
+  },
+  {
+    "id": 1119758,
+    "repository": "https://github.com/baasbox/baasbox.git",
+    "sha1": "d949fe9079a82ee31aa91244aa67baaf56b7e28f",
+    "url": "https://github.com/baasbox/baasbox/commit/d949fe9079a82ee31aa91244aa67baaf56b7e28f",
+    "author": "Claudio",
+    "time": "6/18/15 7:33 AM",
+    "refactorings": [
+      {
+        "type": "Extract Method",
+        "description": "Extract Method public execMultiLineCommands(db ODatabaseRecordTx, log boolean, stopOnException boolean, commands String...) : void extracted from public execMultiLineCommands(db ODatabaseRecordTx, log boolean, commands String...) : void in class com.baasbox.db.DbHelper",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 638
+  },
+  {
+    "id": 1147348,
+    "repository": "https://github.com/dropwizard/metrics.git",
+    "sha1": "4c6ab3d77cc67c7a91155d884077520dcf1509c6",
+    "url": "https://github.com/dropwizard/metrics/commit/4c6ab3d77cc67c7a91155d884077520dcf1509c6",
+    "author": "Cirrus Pairing Station 5",
+    "time": "7/23/15 8:02 AM",
+    "refactorings": [
+      {
+        "type": "Extract Method",
+        "description": "Extract Method private closeGraphiteConnection() : void extracted from public report(gauges SortedMap<String,Gauge>, counters SortedMap<String,Counter>, histograms SortedMap<String,Histogram>, meters SortedMap<String,Meter>, timers SortedMap<String,Timer>) : void in class com.codahale.metrics.graphite.GraphiteReporter",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 1141
+  },
+  {
+    "id": 1156168,
+    "repository": "https://github.com/dropwizard/metrics.git",
+    "sha1": "2331fe19ea88a22de32f15375de8118226eaa1e6",
+    "url": "https://github.com/dropwizard/metrics/commit/2331fe19ea88a22de32f15375de8118226eaa1e6",
+    "author": "Ryan Tenney",
+    "time": "8/3/15 3:30 PM",
+    "refactorings": [
+      {
+        "type": "Extract Method",
+        "description": "Extract Method private registerMetricsForModel(resourceModel ResourceModel) : void extracted from public onEvent(event ApplicationEvent) : void in class io.dropwizard.metrics.jersey2.InstrumentedResourceMethodApplicationListener",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 1033
+  },
+  {
+    "id": 1126591,
+    "repository": "https://github.com/AntennaPod/AntennaPod.git",
+    "sha1": "c64217e2b485f3c6b997a55b1ef910c8b72779d3",
+    "url": "https://github.com/AntennaPod/AntennaPod/commit/c64217e2b485f3c6b997a55b1ef910c8b72779d3",
+    "author": "Martin Fietz",
+    "time": "6/27/15 1:01 PM",
+    "refactorings": [
+      {
+        "type": "Extract Method",
+        "description": "Extract Method public addQueueItem(context Context, performAutoDownload boolean, itemIds long...) : Future<?> extracted from public addQueueItem(context Context, itemIds long...) : Future<?> in class de.danoeh.antennapod.core.storage.DBWriter",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 827
+  },
+  {
+    "id": 1138074,
+    "repository": "https://github.com/Alluxio/alluxio.git",
+    "sha1": "9aeefcd8120bb3b89cdb437d8c32d2ed84b8a825",
+    "url": "https://github.com/Alluxio/alluxio/commit/9aeefcd8120bb3b89cdb437d8c32d2ed84b8a825",
+    "author": "Carson Wang",
+    "time": "7/9/15 1:34 AM",
+    "refactorings": [
+      {
+        "type": "Extract Method",
+        "description": "Extract Method private getCandidateDirInTier(tier StorageTier, blockSize long) : StorageDir extracted from public allocateBlock(userId long, blockId long, blockSize long, location BlockStoreLocation) : TempBlockMeta in class tachyon.worker.block.allocator.MaxFreeAllocator",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 348
+  },
+  {
+    "id": 1156548,
+    "repository": "https://github.com/apache/pig.git",
+    "sha1": "92dce401344a28ff966ad4cf3dd969a676852315",
+    "url": "https://github.com/apache/pig/commit/92dce401344a28ff966ad4cf3dd969a676852315",
+    "author": "Jianyong Dai",
+    "time": "8/3/15 9:16 PM",
+    "refactorings": [
+      {
+        "type": "Extract Method",
+        "description": "Extract Method public depthFirstSearchForFile(statusArray FileStatus[], fileSystem FileSystem, filter PathFilter) : Path extracted from public depthFirstSearchForFile(statusArray FileStatus[], fileSystem FileSystem) : Path in class org.apache.pig.impl.util.Utils",
+        "comment": "<p>depthFirstSearchForFile(statusArray FileStatus[], fileSystem FileSystem) : Path</p><p>becomes</p><p>depthFirstSearchForFile(statusArray FileStatus[], fileSystem FileSystem, filter PathFilter) : Path</p><p>by adding parameter filter.</p><p>&nbsp;</p><p>Method</p><p>depthFirstSearchForFile(fileStatus FileStatus, fileSystem FileSystem) : Path</p><p>was inlined to</p><p>depthFirstSearchForFile(statusArray FileStatus[], fileSystem FileSystem) : Path</p>",
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": "Nikos"
+      }
+    ],
+    "refDiffExecutionTime": 2704
+  },
+  {
+    "id": 1155272,
+    "repository": "https://github.com/raphw/byte-buddy.git",
+    "sha1": "fd000ca2e78fce2f8aa11e6a81e4f23c2f1348e6",
+    "url": "https://github.com/raphw/byte-buddy/commit/fd000ca2e78fce2f8aa11e6a81e4f23c2f1348e6",
+    "author": "Rafael Winterhalter",
+    "time": "7/31/15 8:22 PM",
+    "refactorings": [
+      {
+        "type": "Extract Method",
+        "description": "Extract Method private invokeMethod(methodToken MethodDescription.Token) : Implementation.SpecialMethodInvocation extracted from public invokeSuper(methodToken MethodDescription.Token) : Implementation.SpecialMethodInvocation in class net.bytebuddy.dynamic.scaffold.subclass.SubclassImplementationTarget",
+        "comment": "null",
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 1979
+  },
+  {
+    "id": 1155119,
+    "repository": "https://github.com/jOOQ/jOOQ.git",
+    "sha1": "58a4e74d28073e7c6f15d1f225ac1c2fd9aa4357",
+    "url": "https://github.com/jOOQ/jOOQ/commit/58a4e74d28073e7c6f15d1f225ac1c2fd9aa4357",
+    "author": "lukaseder",
+    "time": "7/31/15 1:51 PM",
+    "refactorings": [
+      {
+        "type": "Extract Method",
+        "description": "Extract Method private millis(temporal Temporal) : long extracted from public from(from Object) : U in class org.jooq.tools.Convert.ConvertAll",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 1574
+  },
+  {
+    "id": 1153354,
+    "repository": "https://github.com/restlet/restlet-framework-java.git",
+    "sha1": "7ffe37983e2f09637b0c84d526a2f824de652de4",
+    "url": "https://github.com/restlet/restlet-framework-java/commit/7ffe37983e2f09637b0c84d526a2f824de652de4",
+    "author": "Hugo Wood",
+    "time": "7/30/15 10:40 AM",
+    "refactorings": [
+      {
+        "type": "Extract Method",
+        "description": "Extract Method private fillRepresentation(model Model, name String, contract Contract) : void extracted from private fillRepresentations(swagger Swagger, contract Contract) : void in class org.restlet.ext.apispark.internal.conversion.swagger.v2_0.Swagger2Reader",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 0
+  },
+  {
+    "id": 1138530,
+    "repository": "https://github.com/hazelcast/hazelcast.git",
+    "sha1": "679d38d4316c16ccba4982d7f3ba13c147a451cb",
+    "url": "https://github.com/hazelcast/hazelcast/commit/679d38d4316c16ccba4982d7f3ba13c147a451cb",
+    "author": "Serkan OZAL",
+    "time": "7/12/15 6:06 AM",
+    "refactorings": [
+      {
+        "type": "Extract Method",
+        "description": "Extract Method protected getFromNearCache(keyData Data, async boolean) : Object extracted from protected getInternal(key K, expiryPolicy ExpiryPolicy, async boolean) : Object in class com.hazelcast.client.cache.impl.AbstractClientCacheProxy",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 2034
+  },
+  {
+    "id": 1157287,
+    "repository": "https://github.com/processing/processing.git",
+    "sha1": "f36b736cf1206dd1af794d6fb4cee967a3553b1f",
+    "url": "https://github.com/processing/processing/commit/f36b736cf1206dd1af794d6fb4cee967a3553b1f",
+    "author": "Jakub Valtar",
+    "time": "8/3/15 12:36 PM",
+    "refactorings": [
+      {
+        "type": "Extract Method",
+        "description": "Extract Method private createDepthAndStencilBuffer(multisample boolean, depthBits int, stencilBits int, packed boolean) : void extracted from private createFBOLayer() : void in class processing.opengl.PGL",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 994
+  },
+  {
+    "id": 1106355,
+    "repository": "https://github.com/hibernate/hibernate-orm.git",
+    "sha1": "2b89553db5081fe4e55b7b34d636d0ea2acf71c5",
+    "url": "https://github.com/hibernate/hibernate-orm/commit/2b89553db5081fe4e55b7b34d636d0ea2acf71c5",
+    "author": "Steve Ebersole",
+    "time": "6/8/15 4:24 PM",
+    "refactorings": [
+      {
+        "type": "Extract Method",
+        "description": "Extract Method private categorizeAnnotatedClass(annotatedClass Class, attributeConverterManager AttributeConverterManager) : void extracted from public AnnotationMetadataSourceProcessorImpl(sources MetadataSources, rootMetadataBuildingContext MetadataBuildingContextRootImpl, jandexView IndexView) in class org.hibernate.boot.model.source.internal.annotations.AnnotationMetadataSourceProcessorImpl",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 6112
+  },
+  {
+    "id": 1107119,
+    "repository": "https://github.com/CyanogenMod/android_frameworks_base.git",
+    "sha1": "96a2c3410f3c71d3ab20857036422f1d64c3a6d3",
+    "url": "https://github.com/CyanogenMod/android_frameworks_base/commit/96a2c3410f3c71d3ab20857036422f1d64c3a6d3",
+    "author": "Steve Kondik",
+    "time": "6/11/15 12:41 AM",
+    "refactorings": [
+      {
+        "type": "Extract Method",
+        "description": "Extract Method private cleanupProximityLocked() : void extracted from private cleanupProximity() : void in class com.android.server.power.PowerManagerService",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 8657
+  },
+  {
+    "id": 1112638,
+    "repository": "https://github.com/CyanogenMod/android_frameworks_base.git",
+    "sha1": "658a918eebcbdeb4f920c2947ca8d0e79ad86d89",
+    "url": "https://github.com/CyanogenMod/android_frameworks_base/commit/658a918eebcbdeb4f920c2947ca8d0e79ad86d89",
+    "author": "Michael Bestas",
+    "time": "6/15/15 1:36 PM",
+    "refactorings": [
+      {
+        "type": "Extract Method",
+        "description": "Extract Method private initTickerView() : void extracted from protected makeStatusBarView() : PhoneStatusBarView in class com.android.systemui.statusbar.phone.PhoneStatusBar",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 6868
+  },
+  {
+    "id": 1118131,
+    "repository": "https://github.com/CyanogenMod/android_frameworks_base.git",
+    "sha1": "15fd4f9caea01e53725086e290d3b35ec4bd4cd9",
+    "url": "https://github.com/CyanogenMod/android_frameworks_base/commit/15fd4f9caea01e53725086e290d3b35ec4bd4cd9",
+    "author": "jie.liu",
+    "time": "6/17/15 11:39 AM",
+    "refactorings": [
+      {
+        "type": "Extract Method",
+        "description": "Extract Method protected reset(animateTransition boolean) : void extracted from public reset() : void in class com.android.keyguard.KeyguardAbsKeyInputView",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 6165
+  },
+  {
+    "id": 1132646,
+    "repository": "https://github.com/CyanogenMod/android_frameworks_base.git",
+    "sha1": "4587c32ab8a1c8e2169e4f93491a8c927216a6ab",
+    "url": "https://github.com/CyanogenMod/android_frameworks_base/commit/4587c32ab8a1c8e2169e4f93491a8c927216a6ab",
+    "author": "Charles Tsai",
+    "time": "7/6/15 3:49 PM",
+    "refactorings": [
+      {
+        "type": "Extract Method",
+        "description": "Extract Method private startAsync() : void extracted from public start() : void in class com.android.systemui.usb.StorageNotification",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 5921
+  },
+  {
+    "id": 1138354,
+    "repository": "https://github.com/CyanogenMod/android_frameworks_base.git",
+    "sha1": "76331570e68446c17e4ff5287f5b7b2b6b472895",
+    "url": "https://github.com/CyanogenMod/android_frameworks_base/commit/76331570e68446c17e4ff5287f5b7b2b6b472895",
+    "author": "Andy Mast",
+    "time": "7/11/15 2:50 AM",
+    "refactorings": [
+      {
+        "type": "Extract Method",
+        "description": "Extract Method public clearFailedUnlockAttempts(clearFingers boolean) : void extracted from public clearFailedUnlockAttempts() : void in class com.android.keyguard.KeyguardUpdateMonitor",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 6374
+  },
+  {
+    "id": 1118568,
+    "repository": "https://github.com/AsyncHttpClient/async-http-client.git",
+    "sha1": "f01d8610b9ceebc1de59d42f569b8af3efbe0a0f",
+    "url": "https://github.com/AsyncHttpClient/async-http-client/commit/f01d8610b9ceebc1de59d42f569b8af3efbe0a0f",
+    "author": "Stephane Landelle",
+    "time": "6/17/15 6:11 PM",
+    "refactorings": [
+      {
+        "type": "Extract Method",
+        "description": "Extract Method package signatureBaseString(method String, uri Uri, oauthTimestamp long, nonce String, formParams List<Param>, queryParams List<Param>) : StringBuilder extracted from public calculateSignature(method String, uri Uri, oauthTimestamp long, nonce String, formParams List<Param>, queryParams List<Param>) : String in class org.asynchttpclient.oauth.OAuthSignatureCalculator",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 548
+  },
+  {
+    "id": 1120077,
+    "repository": "https://github.com/apache/camel.git",
+    "sha1": "5e08a9e8e93a2f117b5fbec9c6d54500d8e99a4d",
+    "url": "https://github.com/apache/camel/commit/5e08a9e8e93a2f117b5fbec9c6d54500d8e99a4d",
+    "author": "Willem Jiang",
+    "time": "6/19/15 12:15 PM",
+    "refactorings": [
+      {
+        "type": "Extract Method",
+        "description": "Extract Method public copyAttachments(that Message) : void extracted from public copyFrom(that Message) : void in class org.apache.camel.impl.MessageSupport",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 7895
+  },
+  {
+    "id": 1138135,
+    "repository": "https://github.com/apache/camel.git",
+    "sha1": "cb0935e3af05b333b5c85a4fb3b1846836218f11",
+    "url": "https://github.com/apache/camel/commit/cb0935e3af05b333b5c85a4fb3b1846836218f11",
+    "author": "Jonathan Anstey",
+    "time": "7/10/15 11:17 AM",
+    "refactorings": [
+      {
+        "type": "Extract Method",
+        "description": "Extract Method private storeCamelContextInQuartzContext() : SchedulerContext extracted from private createAndInitScheduler() : void in class org.apache.camel.component.quartz2.QuartzComponent",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 15605
+  },
+  {
+    "id": 1143666,
+    "repository": "https://github.com/apache/camel.git",
+    "sha1": "ab1d1dd78fe53edb50c4ede447e4ac5a55ee2ac9",
+    "url": "https://github.com/apache/camel/commit/ab1d1dd78fe53edb50c4ede447e4ac5a55ee2ac9",
+    "author": "jkorab",
+    "time": "7/17/15 9:56 AM",
+    "refactorings": [
+      {
+        "type": "Extract Method",
+        "description": "Extract Method public createExchange(message Message, endpoint Endpoint, keyFormatStrategy KeyFormatStrategy) : Exchange extracted from public createExchange(message Message, endpoint Endpoint) : Exchange in class org.apache.camel.component.sjms.jms.JmsMessageHelper",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 10210
+  },
+  {
+    "id": 1123840,
+    "repository": "https://github.com/apache/giraph.git",
+    "sha1": "add1d4f07c925b8a9044cb3aa5bb4abdeaf49fc7",
+    "url": "https://github.com/apache/giraph/commit/add1d4f07c925b8a9044cb3aa5bb4abdeaf49fc7",
+    "author": "Maja Kabiljo",
+    "time": "6/24/15 4:23 PM",
+    "refactorings": [
+      {
+        "type": "Extract Method",
+        "description": "Extract Method private registerSerializer(kryo HadoopKryo, className String, serializer Serializer) : void extracted from private createKryo() : HadoopKryo in class org.apache.giraph.writable.kryo.HadoopKryo",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 1159
+  },
+  {
+    "id": 1121836,
+    "repository": "https://github.com/spring-projects/spring-framework.git",
+    "sha1": "31a5434ea433bdec2283797bf9415c02bb2f41c1",
+    "url": "https://github.com/spring-projects/spring-framework/commit/31a5434ea433bdec2283797bf9415c02bb2f41c1",
+    "author": "Sebastien Deleuze",
+    "time": "6/22/15 12:05 PM",
+    "refactorings": [
+      {
+        "type": "Extract Method",
+        "description": "Extract Method protected addDefaultHeaders(headers HttpHeaders, t T, contentType MediaType) : void extracted from public write(t T, contentType MediaType, outputMessage HttpOutputMessage) : void in class org.springframework.http.converter.AbstractHttpMessageConverter",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 3276
+  },
+  {
+    "id": 1127274,
+    "repository": "https://github.com/apache/hive.git",
+    "sha1": "7eb3567e7880511b76b8b65e8eb7d373927f2fb6",
+    "url": "https://github.com/apache/hive/commit/7eb3567e7880511b76b8b65e8eb7d373927f2fb6",
+    "author": "Swarnim Kulkarni",
+    "time": "6/27/15 8:33 PM",
+    "refactorings": [
+      {
+        "type": "Extract Method",
+        "description": "Extract Method private unionTester(ws Schema, rs Schema, record GenericData.Record) : ResultPair extracted from private unionTester(s Schema, record GenericData.Record) : ResultPair in class org.apache.hadoop.hive.serde2.avro.TestAvroDeserializer",
+        "comment": "null",
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 3223
+  },
+  {
+    "id": 1137157,
+    "repository": "https://github.com/apache/hive.git",
+    "sha1": "f664789737d516ac664462732664121acc111a1e",
+    "url": "https://github.com/apache/hive/commit/f664789737d516ac664462732664121acc111a1e",
+    "author": "Eugene Koifman",
+    "time": "7/8/15 9:53 PM",
+    "refactorings": [
+      {
+        "type": "Extract Method",
+        "description": "Extract Method private dumpConfig(conf Configuration, sb StringBuilder) : void extracted from private dumpEnvironent() : String in class org.apache.hive.hcatalog.templeton.AppConfig",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 5501
+  },
+  {
+    "id": 1142126,
+    "repository": "https://github.com/apache/hive.git",
+    "sha1": "999e0e3616525d77cf46c5865f9981b5a6b5609a",
+    "url": "https://github.com/apache/hive/commit/999e0e3616525d77cf46c5865f9981b5a6b5609a",
+    "author": "Jesus Camacho Rodriguez",
+    "time": "7/14/15 3:18 PM",
+    "refactorings": [
+      {
+        "type": "Extract Method",
+        "description": "Extract Method private hepPlan(basePlan RelNode, followPlanChanges boolean, mdProvider RelMetadataProvider, order HepMatchOrder, rules RelOptRule...) : RelNode extracted from private hepPlan(basePlan RelNode, followPlanChanges boolean, mdProvider RelMetadataProvider, rules RelOptRule...) : RelNode in class org.apache.hadoop.hive.ql.parse.CalcitePlanner.CalcitePlannerAction",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 3784
+  },
+  {
+    "id": 1149551,
+    "repository": "https://github.com/apache/hive.git",
+    "sha1": "92e98858e742bbb669ccbf790a71a618c581df21",
+    "url": "https://github.com/apache/hive/commit/92e98858e742bbb669ccbf790a71a618c581df21",
+    "author": "Alan Gates",
+    "time": "7/24/15 2:43 PM",
+    "refactorings": [
+      {
+        "type": "Extract Method",
+        "description": "Extract Method public use(ctx ParserRuleContext, sql String) : Integer extracted from public use(ctx HplsqlParser.Use_stmtContext) : Integer in class org.apache.hive.hplsql.Stmt",
+        "comment": "null",
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 6300
+  },
+  {
+    "id": 1159836,
+    "repository": "https://github.com/apache/hive.git",
+    "sha1": "8398fbf3dd0937a0a4a3d540977a95f97425f566",
+    "url": "https://github.com/apache/hive/commit/8398fbf3dd0937a0a4a3d540977a95f97425f566",
+    "author": "Jimmy Xiang",
+    "time": "8/6/15 1:00 PM",
+    "refactorings": [
+      {
+        "type": "Extract Method",
+        "description": "Extract Method public closeSparkSession() : void extracted from public close() : void in class org.apache.hadoop.hive.ql.session.SessionState",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 5541
+  },
+  {
+    "id": 1120722,
+    "repository": "https://github.com/osmandapp/Osmand.git",
+    "sha1": "c45b9e6615181b7d8f4d7b5b1cc141169081c02c",
+    "url": "https://github.com/osmandapp/Osmand/commit/c45b9e6615181b7d8f4d7b5b1cc141169081c02c",
+    "author": "Victor Shcherb",
+    "time": "6/20/15 5:09 PM",
+    "refactorings": [
+      {
+        "type": "Extract Method",
+        "description": "Extract Method private addPreviousToActionPoints(lastProjection Location, routeNodes List<Location>, DISTANCE_ACTION double, prevFinishPoint int, routePoint int, loc Location) : void extracted from private calculateActionPoints(topLatitude double, leftLongitude double, bottomLatitude double, rightLongitude double, lastProjection Location, routeNodes List<Location>, cd int, it Iterator<RouteDirectionInfo>, zoom int) : void in class net.osmand.plus.views.RouteLayer",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 1993
+  },
+  {
+    "id": 1123773,
+    "repository": "https://github.com/bitcoinj/bitcoinj.git",
+    "sha1": "2fd96c777164dd812e8b5a4294b162889601df1d",
+    "url": "https://github.com/bitcoinj/bitcoinj/commit/2fd96c777164dd812e8b5a4294b162889601df1d",
+    "author": "Amichai Rothman",
+    "time": "6/24/15 10:21 AM",
+    "refactorings": [
+      {
+        "type": "Extract Method",
+        "description": "Extract Method public newSha256Digest() : MessageDigest extracted from public sha256hash160(input byte[]) : byte[] in class org.bitcoinj.core.Utils",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 1994
+  },
+  {
+    "id": 1136537,
+    "repository": "https://github.com/bitcoinj/bitcoinj.git",
+    "sha1": "95bfa40630e34f6f369e0055d9f37f49bca60247",
+    "url": "https://github.com/bitcoinj/bitcoinj/commit/95bfa40630e34f6f369e0055d9f37f49bca60247",
+    "author": "Mike Hearn",
+    "time": "7/8/15 7:36 PM",
+    "refactorings": [
+      {
+        "type": "Extract Method",
+        "description": "Extract Method public getUTXOs(outPoints List<TransactionOutPoint>, includeMempool boolean) : ListenableFuture<UTXOsMessage> extracted from public getUTXOs(outPoints List<TransactionOutPoint>) : ListenableFuture<UTXOsMessage> in class org.bitcoinj.core.Peer",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RD-1x, RD-2x, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 1322
+  },
+  {
+    "id": 1157680,
+    "repository": "https://github.com/addthis/hydra.git",
+    "sha1": "664923815b5aeeba2025bfe1dc5a0cd1a02a80e2",
+    "url": "https://github.com/addthis/hydra/commit/664923815b5aeeba2025bfe1dc5a0cd1a02a80e2",
+    "author": "Matt Abrams",
+    "time": "8/4/15 12:58 PM",
+    "refactorings": [
+      {
+        "type": "Extract Method",
+        "description": "Extract Method public updateHits(state DataTreeNodeUpdater, path TreeDataParent) : boolean extracted from public updateChildData(state DataTreeNodeUpdater, path TreeDataParent) : void in class com.addthis.hydra.data.tree.concurrent.ConcurrentTreeNode",
+        "comment": null,
+        "validation": "TP",
+        "detectionTools": "RefactoringMiner, RefDiff, RMiner-1x",
+        "validators": null
+      }
+    ],
+    "refDiffExecutionTime": 923
+  }
+]
