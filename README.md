@@ -2,7 +2,7 @@
 
 Código e dados do meu Trabalho de Conclusão de Curso em Ciência da Computação (UFOP): **Detecção Automática de Refatorações: Um Estudo Exploratório Utilizando LLMs**, orientado pela Profa. Aline Norberta de Brito.
 
-A pergunta do trabalho é se LLMs conseguem detectar operações de refatoração olhando apenas para o código antes e depois de um commit, sem parser nem análise estática. Foram avaliados dois modelos, GPT-5.4 (OpenAI) e Claude Haiku 4.5 (Anthropic), sobre 150 operações reais de *Extract Method*, *Move Method* e *Rename Method* extraídas do [oráculo de refatorações de Tsantalis et al.](http://refactoring.encs.concordia.ca/oracle), com 50 operações de cada tipo.
+A pergunta do trabalho é se LLMs conseguem detectar operações de refatoração olhando apenas para o código antes e depois de um commit, sem parser nem análise estática. Foram avaliados dois modelos, GPT-5.4 (OpenAI) e Claude Haiku 4.5 (Anthropic), sobre 150 operações reais de *Extract Method*, *Move Method* e *Rename Method* extraídas do oráculo de refatorações de Tsantalis, com 50 operações de cada tipo.
 
 ## Estrutura
 
@@ -55,6 +55,6 @@ Os dois modelos recebem exatamente o mesmo prompt, com temperatura 0,2, e são c
 
 Para casos de *Move Method* em que a classe de origem ou destino é criada/removida no próprio commit, o dataset registra um marcador textual no lugar do arquivo, e não código, já que essa evolução faz parte do sinal da refatoração.
 
-## Resultados em uma linha
+## Resultados
 
 O GPT-5.4 se mostrou conservador (precisão 0,731, recall 0,333) e o Claude Haiku 4.5, expansivo (precisão 0,537, recall 0,720); a união dos dois eleva o recall a 0,773. A análise completa, incluindo a classificação manual dos 164 falsos positivos, está na monografia e no artigo derivado do trabalho.
