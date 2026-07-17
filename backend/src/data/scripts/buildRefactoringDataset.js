@@ -10,9 +10,9 @@ const __dirname  = dirname(__filename);
 dotenv.config({ path: join(__dirname, "../../../../.env") });
 
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
-const INPUT_PATH   = process.argv[2] ? resolve(process.argv[2]) : join(__dirname, "../json/oracleDataset.json");
-const OUTPUT_PATH  = process.argv[3] ? resolve(process.argv[3]) : join(__dirname, "../json/finalDataset.json");
-const DELAY_MS     = 300; // delay entre chamadas à API para evitar rate limit
+const INPUT_PATH = process.argv[2] ? resolve(process.argv[2]) : join(__dirname, "../json/oracleDataset.json");
+const OUTPUT_PATH = process.argv[3] ? resolve(process.argv[3]) : join(__dirname, "../json/finalDataset.json");
+const DELAY_MS = 300;
 
 const MARK_DELETED = "[ARQUIVO APAGADO NESTE COMMIT — existia na versão anterior, mas foi removido]";
 const MARK_CREATED = "[ARQUIVO CRIADO NESTE COMMIT — não existia na versão anterior]";

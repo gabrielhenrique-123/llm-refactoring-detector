@@ -53,7 +53,7 @@ function get(url) {
       headers: {
         "User-Agent": "node.js",
         "Accept": "application/vnd.github.v3+json",
-        "Authorization": "token " + GITHUB_TOKEN
+        ...(GITHUB_TOKEN && { "Authorization": "token " + GITHUB_TOKEN })
       },
     };
     https.get(url, options, (response) => {

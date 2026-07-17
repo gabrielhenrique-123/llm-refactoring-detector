@@ -9,13 +9,12 @@ import Anthropic from "@anthropic-ai/sdk";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 const __filename = fileURLToPath(import.meta.url);
-const __dirname  = dirname(__filename);
+const __dirname = dirname(__filename);
 
 dotenv.config({ path: join(__dirname, "../../../../.env") });
 
-const openaiClient  = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
-const claudeClient  = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
-const geminiClient  = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+const openaiClient = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+const claudeClient = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 
 // ─── Prompt ───────────────────────────────────────────────────────────────────
 
@@ -331,19 +330,9 @@ async function callClaude(prompt) {
   return parseJson(response.content[0].text);
 }
 
-async function callGemini(prompt) {
-  const model = geminiClient.getGenerativeModel({
-    model: "gemini-2.5-flash",
-    generationConfig: { temperature: 0.2 },
-  });
-  const result = await model.generateContent(prompt);
-  return parseJson(result.response.text());
-}
-
 export const MODELS = [
-  { key: "gpt",    call: callGpt    },
-  { key: "claude", call: callClaude },
-  // { key: "gemini", call: callGemini },
+  { key: "gpt", call: callGpt },
+  { key: "claude", call: callClaude }
 ];
 
 async function identifyRefactorings(codigoAntes, codigoDepois) {
@@ -370,7 +359,7 @@ function projectForModel(commits, modelKey) {
     refactorings: commit.refactorings.map(({ llmResults, ...ref }) => ({
       ...ref,
       llmDetected: llmResults[modelKey].detected,
-      llmError:    llmResults[modelKey].error,
+      llmError: llmResults[modelKey].error,
     })),
   }));
 }
@@ -402,7 +391,7 @@ async function analyzeDataset(inputPath, outputDir, prefix = "finalAnalysis") {
         continue;
       }
 
-      console.log(`  Refatoração ${j + 1}/${commit.refactorings.length}: enviando para GPT, Claude e Gemini (${ref.type})`);
+      console.log(`  Refatoração ${j + 1}/${commit.refactorings.length}: enviando para GPT e Claude (${ref.type})`);
 
       const llmResults = await identifyRefactorings(ref.codeBefore, ref.codeAfter);
 
@@ -431,7 +420,7 @@ async function analyzeDataset(inputPath, outputDir, prefix = "finalAnalysis") {
 
 const entryHref = process.argv[1] ? pathToFileURL(process.argv[1]).href : null;
 if (entryHref && import.meta.url === entryHref) {
-  const inputArg  = process.argv[2] ? resolve(process.argv[2]) : join(__dirname, "../json/finalDataset.json");
+  const inputArg = process.argv[2] ? resolve(process.argv[2]) : join(__dirname, "../json/finalDataset.json");
   const outDirArg = process.argv[3] ? resolve(process.argv[3]) : join(__dirname, "../json");
   const prefixArg = process.argv[4] ?? "finalAnalysis";
 

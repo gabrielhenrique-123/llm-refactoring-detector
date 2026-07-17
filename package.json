@@ -2,10 +2,11 @@
   "name": "refatorador-llm",
   "version": "1.0.0",
   "type": "module",
-  "main": "backend/src/server.js",
   "scripts": {
-    "start": "node backend/src/server.js",
-    "dev": "nodemon backend/src/server.js"
+    "filter-oracle": "node backend/src/data/scripts/filterOracle.js",
+    "data-sheet": "node backend/src/data/scripts/getCommitsDataSheet.js",
+    "build-dataset": "node backend/src/data/scripts/buildRefactoringDataset.js",
+    "run-detection": "node backend/src/data/scripts/runRefactoring.js"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.104.1",
