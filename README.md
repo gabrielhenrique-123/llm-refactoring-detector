@@ -1,92 +1,60 @@
 # LLM Refactoring Detector
 
-## 📌 Sobre o Projeto
+Código e dados do meu Trabalho de Conclusão de Curso em Ciência da Computação (UFOP): **Detecção Automática de Refatorações: Um Estudo Exploratório Utilizando LLMs**, orientado pela Profa. Aline Norberta de Brito.
 
-Este projeto é uma ferramenta desenvolvida para identificar operações de refatoração entre duas versões de código-fonte (Antes e Depois). Utilizando a API da OpenAI (GPT-4o-mini), o sistema analisa as mudanças estruturais e detecta refatorações clássicas como **Extract Method**, **Move Method** e **Rename Method**, independentemente da linguagem de programação.
+A pergunta do trabalho é se LLMs conseguem detectar operações de refatoração olhando apenas para o código antes e depois de um commit, sem parser nem análise estática. Foram avaliados dois modelos, GPT-5.4 (OpenAI) e Claude Haiku 4.5 (Anthropic), sobre 150 operações reais de *Extract Method*, *Move Method* e *Rename Method* extraídas do [oráculo de refatorações de Tsantalis et al.](http://refactoring.encs.concordia.ca/oracle), com 50 operações de cada tipo.
 
-O projeto faz parte de um trabalho acadêmico (Monografia) focado na aplicação de LLMs na Engenharia de Software.
+## Estrutura
 
-## 🚀 Funcionalidades
-
-- **Interface Web Interativa:** Permite a inserção de código original e refatorado lado a lado.
-- **Suporte Multilinguagem:** Analisa códigos em JavaScript, Python, Java e C.
-- **Detecção Inteligente:** Utiliza prompts especializados para identificar refatorações sem confundir com correções de bugs ou novas funcionalidades.
-- **Feedback Visual:** Exibe as refatorações detectadas de forma estruturada.
-
-## 🛠️ Tecnologias Utilizadas
-
-- **Frontend:** React (Vite)
-- **Backend:** Node.js com Express
-- **AI:** OpenAI API (GPT-4o-mini)
-- **Estilização:** CSS Vanilla
-
-## 📂 Estrutura do Projeto
+O que importa está em `backend/src/data`:
 
 ```
-/
-├── backend/          # Servidor Node.js e lógica de integração com LLM
-│   ├── src/
-│   │   ├── llm.js    # Comunicação com a OpenAI
-│   │   ├── route.js  # Definição das rotas da API
-│   │   └── server.js # Configuração do servidor Express
-│
-├── frontend/         # Aplicação React
-│   ├── src/
-│   │   ├── App.jsx   # Interface principal
-│   │   └── api.js    # Chamadas ao backend
-│
-└── test/             # Casos de teste para validação
-    ├── extractMethod/
-    ├── moveMethod/
-    └── renameMethod/
+backend/src/data
+├── scripts/
+│   ├── filterOracle.js            # filtra do oráculo os commits com os 3 tipos validados como TP
+│   ├── getCommitsDataSheet.js     # coleta metadados dos commits e repositórios (API do GitHub)
+│   ├── buildRefactoringDataset.js # recupera o código-fonte antes/depois de cada operação
+│   └── runRefactoring.js          # envia cada operação aos dois LLMs e salva as detecções
+└── json/
+    ├── oracle.json                # oráculo completo
+    ├── oracleDataset.json         # as 150 operações selecionadas
+    ├── finalDataset.json          # dataset enriquecido com o código antes/depois
+    ├── finalAnalysis_gpt.json     # detecções do GPT-5.4
+    ├── finalAnalysis_claude.json  # detecções do Claude Haiku 4.5
+    └── ...                        # métricas e tabelas compiladas a partir das detecções
 ```
 
-## ⚡ Como Rodar o Projeto
+## Como rodar
 
-### Pré-requisitos
+É preciso Node 18 ou superior (os scripts usam `fetch` nativo).
 
-- Node.js instalado (v14+ recomendado)
-- Uma chave de API da OpenAI
+```bash
+npm install
+```
 
-### 1. Configuração do Backend
+Crie um `.env` na raiz do projeto:
 
-1. Navegue até a pasta raiz e instale as dependências:
-   ```bash
-   npm install
-   ```
-2. Crie um arquivo `.env` na raiz com sua chave da OpenAI:
-   ```env
-   OPENAI_API_KEY=sua_chave_aqui
-   PORT=3000
-   ```
-3. Inicie o servidor:
-   ```bash
-   npm start
-   ```
+```
+OPENAI_API_KEY=...
+ANTHROPIC_API_KEY=...
+GITHUB_TOKEN=...
+```
 
-### 2. Configuração do Frontend
+O token do GitHub é tecnicamente opcional, mas sem ele o rate limit anônimo da API estoura logo nos primeiros commits.
 
-1. Em um novo terminal, entre na pasta `frontend`:
-   ```bash
-   cd frontend
-   ```
-2. Instale as dependências:
-   ```bash
-   npm install
-   ```
-3. Inicie a aplicação React:
-   ```bash
-   npm run dev
-   ```
-4. Acesse `http://localhost:5173` no seu navegador.
+O pipeline tem quatro etapas, nesta ordem:
 
-## 🧪 Testes
+```bash
+npm run filter-oracle   # 1. filtra o oráculo -> filteredOracle.json
+npm run data-sheet      # 2. metadados dos repositórios (stars, forks, autores)
+npm run build-dataset   # 3. baixa o código antes/depois de cada operação
+npm run run-detection   # 4. consulta os dois LLMs e salva as detecções
+```
 
-O projeto conta com casos de teste baseados em exemplos reais de refatoração. Eles estão localizados na pasta `test/` e podem ser usados para validar a precisão do modelo.
+Os dois modelos recebem exatamente o mesmo prompt, com temperatura 0,2, e são consultados de forma independente. O prompt completo (contexto, persona, definições de Fowler, restrições e formato de saída em JSON) está em `runRefactoring.js`.
 
-Para utilizar os casos de teste manualmente:
+Para casos de *Move Method* em que a classe de origem ou destino é criada/removida no próprio commit, o dataset registra um marcador textual no lugar do arquivo, e não código, já que essa evolução faz parte do sinal da refatoração.
 
-1. Abra um arquivo `before` e seu correspondente `after` na pasta `test/`.
-2. Copie os conteúdos para a interface web.
-3. Selecione a linguagem correta.
-4. Verifique se a refatoração foi identificada corretamente.
+## Resultados em uma linha
+
+O GPT-5.4 se mostrou conservador (precisão 0,731, recall 0,333) e o Claude Haiku 4.5, expansivo (precisão 0,537, recall 0,720); a união dos dois eleva o recall a 0,773. A análise completa, incluindo a classificação manual dos 164 falsos positivos, está na monografia e no artigo derivado do trabalho.
